@@ -8,8 +8,8 @@
 
 /*共通設定*/
 .frame_settings{
-    margin:0 auto 160px auto;
-    width: 1000px;
+    margin:0 auto calc(100vh*160/1024) auto;
+    width:calc(100vw*1000/1440);
 }
 
 .card_settings{
@@ -46,7 +46,7 @@ h3{
 }
 
 body{
-    width:1440px;
+    width:100vw;
     background-color: #F5F5F7;
 }
 
@@ -58,24 +58,27 @@ body{
     top:0;
     content: "";
     background-color: #208200;
-    height: 10px;
-    width:1440px;
+    height: calc(100vh*10/1024);
+    width:100vw;
     box-shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
 
 .frame_header{
     position: fixed;
     top:0;
-    width:1440px;
-    height: 88px;
+    width:100vw;
+    height: calc(100vh*88/1024);
     background-color: #ffffff;
     z-index: 9999;
 }
 
 .header_icon{
-    position: absolute;
-    top:16px;
-    left:32px;
+    border:solid 1px black;
+    padding-top:calc(100vh*16/1024);
+    padding-left: calc(100vw*32*1024);
+    width:calc(100vw*160/1440);
+    height: calc(100vh*64/1024);
+    
 }
 
 .header_menu_area{
@@ -123,7 +126,7 @@ body{
 }
 
 #first_view_img{
-    width:100%;
+    width:100vw;
     height: 704px;
     object-fit: cover;
     
