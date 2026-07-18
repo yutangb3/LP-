@@ -1,0 +1,618 @@
+/*全体設定*/
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+
+/*共通設定*/
+.frame_settings{
+    margin:0 auto 160px auto;
+    width: 1000px;
+}
+
+.card_settings{
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    border-radius: 24px;
+    background-color: #ffffff;
+}
+
+.overflow_wrap{
+    overflow-wrap: break-word;
+}
+
+h1{
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: bold;
+    color: #208200;
+    padding-bottom: 48px;
+    text-align: center;
+}
+
+h2{
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 24px;
+    color: #208200;
+    
+}
+
+h3{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: normal;
+}
+
+body{
+    width:1440px;
+    background-color: #F5F5F7;
+}
+
+
+/*個別設定*/
+/*ヘッダー*/
+.frame_header::before{
+    position: absolute;
+    top:0;
+    content: "";
+    background-color: #208200;
+    height: 10px;
+    width:1440px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.frame_header{
+    position: fixed;
+    top:0;
+    width:1440px;
+    height: 88px;
+    background-color: #ffffff;
+    z-index: 9999;
+}
+
+.header_icon{
+    position: absolute;
+    top:16px;
+    left:32px;
+}
+
+.header_menu_area{
+    display: flex;
+    gap:24px;
+    position:absolute;
+    top:32px;
+    right:24px;
+    align-items: center;
+}
+
+.header_menu_area>*{
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: bold;
+
+}
+
+.header_menu_area .button_free_back{
+    width:176px;
+    height:32px;
+    display: flex;
+    padding:0;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+}
+
+.header_menu_area .button_lesson_back{
+    width:152px;
+    height:32px;
+    display: flex;
+    padding:0;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+}
+
+.header_menu_area .button_free_text , .header_menu_area .button_lesson_text{
+    font-size: 16px;
+    margin:0 auto;    
+}
+
+
+
+/*ファーストビュー*/
+.first_view{
+    position: relative;
+}
+
+#first_view_img{
+    width:100%;
+    height: 704px;
+    object-fit: cover;
+    
+}
+
+#first_view_title{
+    position:absolute;
+    top:128px;
+    left:88px;
+    font-size: 96px;
+    line-height: 96px;
+    font-weight: bold;
+    color:#208200;
+}
+
+#first_view_sub{
+    position: absolute;
+    top:336px;
+    left:96px;
+}
+
+#arrow{
+    width: 80px;
+    color:#208200;
+    font-size: 128px;
+    font-weight: bold;
+    display: block;
+    margin:0 auto ;
+    transform: rotate(90deg);
+}
+
+.first_button_area{
+    margin-left: 96px;
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+    position: absolute;
+    bottom:128px;
+}
+
+.button_free_back{
+    width:312px;
+    height:56px;
+    background-color:#FF4639;
+    border-radius:28px;
+    padding-left: 32px;
+    display: flex;
+    align-items: center;
+}
+
+.button_free_text{
+    font-size: 28px;
+    color: #ffffff;
+    font-weight: 900;
+    line-height:28px;
+}
+
+.button_lesson_back{
+    width:296px;
+    height:56px;
+    background-color:#ffffff;
+    border-radius:28px;
+    border:solid 3.5px #FF4639;
+    padding-left: 32px;
+    display: flex;
+    align-items: center;
+} 
+
+.button_lesson_text{
+    font-size: 28px;
+    color:#FF4639;
+    font-weight: 900;
+    line-height:28px;
+}
+
+/*プログラミングとは*/
+.frame_programming{
+    width: 1000px;
+    height: 320px;
+    margin:104px auto 160px auto;
+    position: relative;
+}
+
+.programming_card{
+    width: 496px;
+    height:184px;
+    border-radius: 25px;
+}
+
+#monitor{
+    width: 360px;
+    height:240px;
+    position: absolute;
+    bottom:0;
+    right:0;
+}
+
+#type_woman{
+    width: 144px;
+    height: 112px;
+    position: absolute;
+    bottom:0;
+    right:344px;
+}
+
+#programming_h1{
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: bold;
+    color: #208200;
+    padding: 40px 0 16px 40px;
+}
+
+#programming_text{
+    padding-left:40px
+}
+/*プログラミングの魅力について知ろう。*/
+.frame_programming_attractive{
+    height:680px;
+}
+
+.attractive_card_area{
+    width:1000px;
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.attractive_card{
+    width: 304px;
+    height: 600px;
+}
+
+.attractive_title{
+    padding: 40px 0 24px 40px;
+}
+
+.attractive_text{
+    padding:0 40px;
+    height: 184px;
+}
+
+.attractive_svg_area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 56px;
+}
+
+
+.attractive_svg{
+    width:200px;
+    height:200px;
+}
+
+
+/*BeEngineerの強みを見てみよう！*/
+.frame_strength{
+    height:792px;
+}
+
+.strength_card_area{
+    width:1000px;
+    height:712px;
+    display: flex;
+    flex-direction: column;
+    gap:32px;
+}
+
+.strength_card{
+    width:1000px;
+    height:216px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:0;
+}
+
+.strength_text_area{
+    display: block;
+    width:504px;
+    height: 216px;
+}
+
+.strength_card h2{
+    padding:56px 0 8px 40px;
+
+}
+
+.strength_card h3{
+    padding:0 0 56px 40px;
+    width: 368px;
+}
+
+.strength_img_area{
+    display: flex;
+    width:496px;
+    height: 216px;
+}
+
+.strength_img{
+    width:480px;
+    height:184px;
+    object-fit: cover;
+    margin: auto 0;
+    border-radius: 24px;
+}
+
+
+/*どのような講座が受けられるの？*/
+.lesson_area{
+    width:1000px;
+    height: 584px;
+    display: flex;
+    gap: 32px;
+}
+
+.lesson_tiktok{
+    width: 344px;
+    height: 584px;
+}
+
+.lesson_name_time_content{
+    width:624px;
+    height:584px;
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+}
+
+.lesson_name_time{
+    width:624px;
+    height:120px;
+    display: flex;
+    gap:16px;
+}
+
+.lesson_name , .lesson_time{
+    width: 304px;
+    height: 120px;
+}
+
+.lesson_name h2, .lesson_time h2 ,.lesson_content h2{
+    padding:16px 0px 24px 32px;
+}
+
+.lesson_name h3 , .lesson_time h3{
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0 auto;
+    text-align: center;
+}
+.lesson_content{
+    width:624px;
+    height:448px;
+}
+
+.lesson_content h3{
+    width:560px;
+    padding-left:32px;
+}
+
+.lesson_svg{
+    width: 304px;
+    height: 134px;
+    margin:  50px auto;
+
+}
+
+/*授業風景を見てみよう！*/
+.frame_youtube{
+    height: 680px;
+}
+
+
+
+/*授業風景を見てみよう！*/
+.flow_card{
+    width:1000px;
+    height:192px;
+    padding-top:24px;
+}
+
+.flow_elements{
+    width:1000px;
+    height:104px;
+    display:flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+ 
+}
+
+.flow_texts>*{
+    font-size: 24px;
+    line-height:24px;
+    font-weight:bold;
+    position: absolute;
+}
+
+.flow_texts{
+    width:1000px;
+    height:24px;
+    position:relative;
+}
+
+.flow_text1{
+    left:50px;
+}
+
+.flow_text2{
+    left:256px;
+}
+
+.flow_text3{
+    left:416px;
+}
+
+.flow_text4{
+    left:672px;
+}
+
+.flow_text5{
+    left:840px;
+}
+
+/*CTA*/
+.frame_cta{
+    height: 200px;
+}
+
+.cta_card{
+    width:1000px;
+    height: 200px;
+    position: relative;
+}
+
+
+
+.cta_text h1{
+    padding:0;
+    text-align:initial;
+    padding: 32px 0 24px 32px;
+}
+
+.cta_button_area{
+    display: flex;
+    height: 72px;
+     justify-content: center;
+    gap:64px;
+    margin:center
+}
+
+.cta_button_area .button_free_back{
+    width:376px;
+    height:72px;
+    display: flex;
+    padding: 0;
+    border-radius: 36px;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+}
+
+.cta_button_area .button_lesson_back{
+    width:360px;
+    height:72px;
+    display: flex;
+    padding: 0;
+    border-radius: 36px;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+}
+
+.cta_button_area .button_free_text , .cta_button_area .button_lesson_text{
+    font-size: 36px;
+    justify-content: center;
+    margin: 0 auto;
+    
+}
+
+/*生徒や講師の声を聞いてみよう！*/
+.frame_voice{
+    height:592px;
+}
+
+.voice_card_area{
+    display: flex;
+    justify-content: center;
+    gap:40px;
+    margin: 0 auto;
+}
+
+.voice_card{
+    padding-top:40px;
+    padding-left: 40px;
+    width:304px;
+    height: 512px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    
+}
+
+.voice_card::before{
+    content: "";
+    width: 304px;
+    height: 264px;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255,255,255,1) 0%,
+        rgba(255,255,255,1) 8%,
+        rgba(255,255,255,0.85) 15%,
+        rgba(255,255,255,0.5) 25%,
+        rgba(255,255,255,0.15) 40%,
+        rgba(255,255,255,0) 50%
+        );
+    position: absolute;
+    bottom:0px;
+    left:0px;
+    border-radius: 0  0 24px 24px;
+    z-index:80;
+}
+
+.voice_card h2{
+    padding-bottom: 24px;
+    z-index: 101;
+    position: relative;
+    
+}
+
+.voice_card h3{
+    width:216px;
+    z-index: 100;
+    position: relative;
+}
+
+
+
+.voice_img{
+    width: 304px;
+    height:264px;
+    object-fit: cover;
+    border-radius: 0 0 24px 24px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: 2;
+}
+
+.voice_card h3::after{
+    content: "";
+    position: absolute;
+    width: 304px;
+    height: 50px;
+    top:150px;
+    left:0px;
+    z-index: 300;
+    backdrop-filter: blur(4px);
+}
+
+
+/*料金体系*/
+.frame_price{
+    height: 264px;
+}
+
+.price_card_area{
+    width:1000px;
+    height:204px;
+    display: flex;
+    gap:24px;
+}
+
+.price_card{
+    width:488px;
+    height:204px;
+}
+
+.price_title{
+    font-size: 32px;
+    line-height:32px;
+    font-weight: bold;
+    padding-top:32px;
+    padding-bottom: 24px;
+    text-align: center;
+}
+
+.price_yen{
+    font-size:40px;
+    line-height:40px;
+    font-weight: bold;
+    color:#208200;
+    text-align: center;
+}
