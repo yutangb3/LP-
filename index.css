@@ -8,8 +8,9 @@
 
 /*共通設定*/
 .frame_settings{
-    margin:0 auto calc(100vh*160/1024) auto;
-    width:calc(100vw*1000/1440);
+    margin:0 auto 160px auto;
+    max-width: 1000px;
+    width: 95%;
 }
 
 .card_settings{
@@ -46,7 +47,7 @@ h3{
 }
 
 body{
-    width:100vw;
+    width:100%;
     background-color: #F5F5F7;
 }
 
@@ -59,34 +60,34 @@ body{
     content: "";
     background-color: #208200;
     height: calc(100vh*10/1024);
-    width:100vw;
+    width:100%;
     box-shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
 
 .frame_header{
     position: fixed;
     top:0;
-    width:100vw;
+    width:100%;
     height: calc(100vh*88/1024);
     background-color: #ffffff;
     z-index: 9999;
+    display: flex;
 }
 
 .header_icon{
-    border:solid 1px black;
     padding-top:calc(100vh*16/1024);
-    padding-left: calc(100vw*32*1024);
+    padding-left: calc(100vw*32/1024);
+}
+
+.header_icon svg{
     width:calc(100vw*160/1440);
     height: calc(100vh*64/1024);
-    
 }
 
 .header_menu_area{
     display: flex;
     gap:24px;
-    position:absolute;
-    top:32px;
-    right:24px;
+    margin: auto calc(100%*24/1024) auto auto;
     align-items: center;
 }
 
@@ -98,26 +99,27 @@ body{
 }
 
 .header_menu_area .button_free_back{
-    width:176px;
-    height:32px;
-    display: flex;
-    padding:0;
     box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+    height:32px;
 }
 
 .header_menu_area .button_lesson_back{
-    width:152px;
-    height:32px;
-    display: flex;
-    padding:0;
     box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+    height: 32px;
 }
 
-.header_menu_area .button_free_text , .header_menu_area .button_lesson_text{
+.header_menu_area .button_free_text{
     font-size: 16px;
-    margin:0 auto;    
+    line-height: 16px;
+    padding: 8px;   
 }
 
+.header_menu_area .button_lesson_text{
+    font-size: 16px;
+    margin:0 auto; 
+    line-height: 9px; 
+    padding: 8px;  
+}
 
 
 /*ファーストビュー*/
@@ -125,14 +127,13 @@ body{
     position: relative;
 }
 
-#first_view_img{
-    width:100vw;
+.first_view_img{
+    width:100%;
     height: 704px;
     object-fit: cover;
-    
 }
 
-#first_view_title{
+.first_view_title{
     position:absolute;
     top:128px;
     left:88px;
@@ -142,13 +143,13 @@ body{
     color:#208200;
 }
 
-#first_view_sub{
+.first_view_sub{
     position: absolute;
     top:336px;
     left:96px;
 }
 
-#arrow{
+.arrow_text{
     width: 80px;
     color:#208200;
     font-size: 128px;
@@ -165,14 +166,13 @@ body{
     gap:8px;
     position: absolute;
     bottom:128px;
+    align-items: flex-start;
 }
 
 .button_free_back{
-    width:312px;
-    height:56px;
     background-color:#FF4639;
     border-radius:28px;
-    padding-left: 32px;
+    height: 56px;
     display: flex;
     align-items: center;
 }
@@ -182,15 +182,14 @@ body{
     color: #ffffff;
     font-weight: 900;
     line-height:28px;
+    padding:14px;
 }
 
 .button_lesson_back{
-    width:296px;
-    height:56px;
     background-color:#ffffff;
     border-radius:28px;
     border:solid 3.5px #FF4639;
-    padding-left: 32px;
+    height: 56px;
     display: flex;
     align-items: center;
 } 
@@ -199,50 +198,56 @@ body{
     font-size: 28px;
     color:#FF4639;
     font-weight: 900;
-    line-height:28px;
+    padding:14px;
 }
 
 /*プログラミングとは*/
 .frame_programming{
-    width: 1000px;
     height: 320px;
     margin:104px auto 160px auto;
-    position: relative;
+    display: flex;
+    gap:0;
+    border: solid 1px black;
 }
 
 .programming_card{
     width: 496px;
     height:184px;
     border-radius: 25px;
+    padding:40px;
+    border: solid 1px black;
 }
 
-#monitor{
+.programming_svg{
+    width:480px;
+    height: 264px;
+    display: flex;
+    gap:0;
+    border: solid 1px black;
+    margin:auto auto 0 0;
+}
+
+.monitor{
     width: 360px;
-    height:240px;
-    position: absolute;
-    bottom:0;
-    right:0;
+    height:240px; 
+    border: solid 1px black;
+    margin:auto 0 0 0;
 }
-
-#type_woman{
+.type_woman{
     width: 144px;
     height: 112px;
-    position: absolute;
-    bottom:0;
-    right:344px;
+    border: solid 1px black;
+    margin:auto 0 0 0;
 }
 
-#programming_h1{
+.programming_h1{
     font-size: 24px;
     line-height: 24px;
     font-weight: bold;
     color: #208200;
-    padding: 40px 0 16px 40px;
+    margin-bottom: 16px;
 }
 
-#programming_text{
-    padding-left:40px
-}
 /*プログラミングの魅力について知ろう。*/
 .frame_programming_attractive{
     height:680px;
@@ -258,28 +263,36 @@ body{
 .attractive_card{
     width: 304px;
     height: 600px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
 }
 
 .attractive_title{
-    padding: 40px 0 24px 40px;
+    margin-bottom: 24px;
+    border:solid 1px black;
 }
 
 .attractive_text{
-    padding:0 40px;
-    height: 184px;
+    max-height: 184px;
+    border:solid 1px black;
 }
 
 .attractive_svg_area{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 56px;
+    margin:auto auto 0 auto;
+    border:solid 1px black;
+    width:200px;
+    height:200px;
 }
 
 
 .attractive_svg{
     width:200px;
     height:200px;
+    border:solid 1px black;
 }
 
 
@@ -303,28 +316,33 @@ body{
     justify-content: center;
     align-items: center;
     gap:0;
+    border:solid 1px black;
 }
 
 .strength_text_area{
     display: block;
     width:504px;
     height: 216px;
+    border:solid 1px black;
+    padding:56px 0 0 40px;
 }
 
-.strength_card h2{
-    padding:56px 0 8px 40px;
 
+.strength_card h2{
+    margin-bottom: 8px;
+    border:solid 1px black;
 }
 
 .strength_card h3{
-    padding:0 0 56px 40px;
-    width: 368px;
+    max-width: 368px;
+    border:solid 1px black;
 }
 
 .strength_img_area{
     display: flex;
     width:496px;
     height: 216px;
+    border:solid 1px black;
 }
 
 .strength_img{
@@ -367,26 +385,33 @@ body{
 .lesson_name , .lesson_time{
     width: 304px;
     height: 120px;
+    padding:16px 32px;
+    border:solid 1px black;
+    display: flex;
+    flex-direction: column;
 }
 
 .lesson_name h2, .lesson_time h2 ,.lesson_content h2{
-    padding:16px 0px 24px 32px;
+    margin-bottom: 24px;
+    border:solid 1px black;
 }
 
 .lesson_name h3 , .lesson_time h3{
     font-size: 24px;
     font-weight: 500;
     margin: 0 auto;
-    text-align: center;
+    border:solid 1px black;
 }
+
 .lesson_content{
     width:624px;
     height:448px;
+    padding:48px 32px;
 }
 
 .lesson_content h3{
+    margin-top: 24px;
     width:560px;
-    padding-left:32px;
 }
 
 .lesson_svg{
@@ -461,7 +486,7 @@ body{
 .cta_card{
     width:1000px;
     height: 200px;
-    position: relative;
+    padding:32px;
 }
 
 
@@ -469,7 +494,8 @@ body{
 .cta_text h1{
     padding:0;
     text-align:initial;
-    padding: 32px 0 24px 32px;
+    margin-bottom: 24px;
+    border:solid 1px black;
 }
 
 .cta_button_area{
@@ -477,32 +503,28 @@ body{
     height: 72px;
      justify-content: center;
     gap:64px;
-    margin:center
+    margin:center;
+    border:solid 1px black;
 }
 
 .cta_button_area .button_free_back{
-    width:376px;
-    height:72px;
-    display: flex;
-    padding: 0;
     border-radius: 36px;
     box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
 }
 
 .cta_button_area .button_lesson_back{
-    width:360px;
-    height:72px;
-    display: flex;
-    padding: 0;
     border-radius: 36px;
     box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
 }
 
-.cta_button_area .button_free_text , .cta_button_area .button_lesson_text{
+.cta_button_area .button_free_text{
     font-size: 36px;
-    justify-content: center;
-    margin: 0 auto;
-    
+    padding:18px;
+}
+
+.cta_button_area .button_lesson_text{
+    font-size: 36px;
+    padding: 18px;
 }
 
 /*生徒や講師の声を聞いてみよう！*/
@@ -518,13 +540,14 @@ body{
 }
 
 .voice_card{
-    padding-top:40px;
-    padding-left: 40px;
+    padding:40px;
     width:304px;
     height: 512px;
     position: relative;
     overflow: hidden;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
     
 }
 
@@ -549,9 +572,11 @@ body{
 }
 
 .voice_card h2{
-    padding-bottom: 24px;
+    margin-bottom: 24px;
     z-index: 101;
     position: relative;
+    border:solid 1px black;
+
     
 }
 
@@ -559,6 +584,8 @@ body{
     width:216px;
     z-index: 100;
     position: relative;
+    border:solid 1px black;
+
 }
 
 
@@ -568,10 +595,16 @@ body{
     height:264px;
     object-fit: cover;
     border-radius: 0 0 24px 24px;
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
     z-index: 2;
+}
+
+.voice_img_area{
+    width: 304px;
+    height:264px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    z-index: 3;
 }
 
 .voice_card h3::after{
@@ -601,15 +634,17 @@ body{
 .price_card{
     width:488px;
     height:204px;
+    padding: 32px;
 }
 
 .price_title{
     font-size: 32px;
     line-height:32px;
     font-weight: bold;
-    padding-top:32px;
-    padding-bottom: 24px;
+    margin-bottom: 24px;
     text-align: center;
+    border:solid 1px black;
+
 }
 
 .price_yen{
@@ -618,4 +653,185 @@ body{
     font-weight: bold;
     color:#208200;
     text-align: center;
+    border:solid 1px black;
+
+}
+
+/*日時・場所*/
+.schedule_place_card{
+    height:880px;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+}
+
+.schoolname_area{
+    height: 88px;
+    margin: 0 auto;
+    display: flex;
+    gap:48px;
+    align-items: center;
+    justify-content: center;
+    border-bottom: solid 2px #F5F5F7;
+}
+
+.schoolname_text{
+
+    font-size: 28px;
+    font-weight: 700;
+    padding: 8px;
+    background-image: blur(10px);
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+    border-radius: 25px;
+    border: solid 1px #208200;
+}
+
+.schedule_area{
+    display: flex;
+    gap:0;
+}
+
+.free_schedule_area , .python_schedule_area{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:24px;
+    
+}
+
+.schedule_area h2,.python_schedule_area h2{
+    color: black;
+    margin-top: 24px;
+}
+
+.free_schedules{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:88px;
+}
+
+.python_schedules{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap:40px;
+}
+
+.free_schedule , .python_schedule_1 , .python_schedule_2{
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:8px;
+    width: fit-content;
+}
+
+.python_schedule{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap:0px;
+}
+
+.free_date{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.free_day , .free_time{
+    font-size: 24px;
+    padding: 4px;
+    border: solid 2px black;
+    border-radius: 2px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.free_time{
+    border: none;
+    
+}
+
+.blue_saturday{
+    color: #0A7FE8;
+}
+
+.red_sunday{
+    color: #f04830;
+}
+
+.access_button{
+    padding: 38px;
+    border-radius: 50%;
+    margin: auto 10px 10px auto;
+    position: relative;
+    background-color: #208200;
+    font-size: 24px;
+    color: #ffffff;
+    line-height: 24px;
+    font-weight: bold;
+}
+
+/*申し込みフォーム*/
+.frame_application{
+    height:992px;
+}
+
+.application_card{
+    width:1000px;
+    height:912px;
+    display: flex;
+}
+
+.enter_form_area{
+    width: 720px;
+    height:656px;
+    display: flex;
+    gap:80px;
+    margin: 64px auto auto auto;
+}
+
+.enter_forms_1 , .enter_forms_2{
+    display: flex;
+    flex-direction: column;
+    gap:56px;
+}
+
+.enter_form{
+    width:320px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+    align-items: flex-start;
+}
+
+.enter_form label{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.enter_form input{
+    width: 320px;
+    height: 44px;
+    border: none;
+    border-bottom: solid 3px #d9d9d9;
+    
+}
+
+.enter_form span{
+    color: #f04830;
+}
+
+
+/*フッター*/
+footer{
+    height: 224px;
+    width: 100%;
+    background-color: ;
 }

@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="frame_header">
+    <header class="frame_header">
         <div class="header_icon">
             <svg width="160" height="64" viewBox="0 0 159 64" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M62.417 58.4037C62.1964 59.9676 61.3748 61.382 60.1288 62.3428C58.903 63.4108 57.336 63.9991 55.7145 64H49.7214C46.199 64 44.4513 62.1346 44.4785 58.4037H47.4822C47.3803 60.2579 48.2446 61.188 50.0873 61.188H53.0839C53.8972 61.1866 54.6838 60.896 55.3048 60.3676C55.9269 59.8885 56.3384 59.1838 56.4514 58.4037H62.417Z" fill="black"/>
@@ -24,7 +24,7 @@
 </svg>
 
         </div>
-        <div class="header_menu_area">
+        <nav class="header_menu_area">
                 <div>プログラミングとは</div>
                 <div>BeEngineerの強み</div>
                 <div>開講講座</div>
@@ -37,12 +37,12 @@
                 <div class="button_lesson_back card_settings">
                     <div class="button_lesson_text">講座に参加する→</div>
                 </div>
-        </div>
-    </div>
-    <div class="first_view">
-        <img id="first_view_img" src="img/first_view.png">
-        <p id="first_view_title">夏しかない。<br>今走りだそう。</p>
-        <p id="first_view_sub">夏限定講座に参加することであなただけのゲームやwebサイトを作れるよ!<br>
+        </nav>
+    </header>
+    <section class="first_view">
+        <img class="first_view_img" src="img/first_view.png">
+        <p class="first_view_title">夏しかない。<br>今走りだそう。</p>
+        <p class="first_view_sub">夏限定講座に参加することであなただけのゲームやwebサイトを作れるよ!<br>
                                作品をつくり様々なことを体験し新しい視点が見える！<br>
                                未経験でも大丈夫！全力でサポートするよ。まずは知ることから始めよう。</p>
         <div class="first_button_area">
@@ -53,24 +53,26 @@
                 <div class="button_lesson_text">講座に参加する→</div>
             </div>
         </div>
-    </div>
+    </section>
     <div class="arrow">
-        <span id="arrow">→</span>
+        <span class="arrow_text">→</span>
     </div>
-    <div class="frame_programming">
-        <div class="programming_card card_settings">
-            <p id="programming_h1">プログラミングとは</p>
-            <h3 id="programming_text">プログラミングとはコンピューターを動かすために指<br>
+    <section class="frame_programming frame_settings">
+        <article class="programming_card card_settings">
+            <p class="programming_h1">プログラミングとは</p>
+            <h3 class="programming_text">プログラミングとはコンピューターを動かすために指<br>
                 示することです。身近な例だとゲームやアプリなど様々<br>
                 なところに活用されています。</h3>
-        <img id="monitor" src="img/monitor.svg">
-        <img id="type_woman" src="img/type-woman.svg">
+        </article>
+        <div class="programming_svg">
+            <img class="type_woman" src="img/type-woman.svg">
+            <img class="monitor" src="img/monitor.svg">
         </div>
-    </div>
-    <div class="frame_programming_attractive frame_settings">
+    </section>
+    <section class="frame_programming_attractive frame_settings">
             <h1>まずはプログラミングを学ぶ魅力について知ろう！</h1>
         <div class="attractive_card_area">
-            <div class="attractive_card card_settings">
+            <article class="attractive_card card_settings">
                 <h2 class="attractive_title">論理的思考力</h2>
                 <h3 class="attractive_text overflow_wrap">
                     プログラムを作る過程で目標
@@ -83,8 +85,8 @@
                 <div class="attractive_svg_area">
                    <img class="attractive_svg" src="img/think.svg"> 
                 </div>
-            </div>
-        <div class="attractive_card card_settings">
+            </article>
+            <article class="attractive_card card_settings">
                 <h2 class="attractive_title">ITスキルの向上</h2>
                 <h3 class="attractive_text overflow_wrap">
                     プログラミングはもちろん現
@@ -96,8 +98,8 @@
                     <img class="attractive_svg" src="img/ITskill.svg">
                 </div>
                 
-            </div>
-        <div class="attractive_card card_settings">
+            </article>
+            <article class="attractive_card card_settings">
                 <h2 class="attractive_title">アイデアを形に</h2>
                 <h3 class="attractive_text overflow_wrap">
                     自分が想像したり思い浮かん
@@ -109,14 +111,13 @@
                 <div class="attractive_svg_area">
                     <img class="attractive_svg" src="img/idea.svg">
                 </div>
-            </div>
-        </div>
-        
-    </div>
-    <div class="frame_strength frame_settings">
+             </article>
+        </div>  
+    </section>
+    <section class="frame_strength frame_settings">
         <h1>BeEngineerの強みとは？</h1>
         <div class="strength_card_area">
-            <div class="strength_card card_settings">
+            <article class="strength_card card_settings">
                 <div class="strength_text_area">
                     <h2>国公立大生による集団授業</h2>
                     <h3 class="overflow_wrap">国公立大生による質の高い集団授業が展開されます。
@@ -126,8 +127,8 @@
                 <div class="strength_img_area">
                     <img class="strength_img" src="img/class.jpg">
                 </div>
-            </div>
-            <div class="strength_card card_settings">
+            </article>
+            <article class="strength_card card_settings">
                 <div class="strength_text_area">
                     <h2>デジタル教科書</h2>
                     <h3 class="overflow_wrap">京大生のノウハウを詰め込んだBe Engineerならでは
@@ -137,8 +138,8 @@
                 <div class="strength_img_area">
                     <img class="strength_img" src="img/dagital.jpg">
                 </div>
-            </div>
-            <div class="strength_card card_settings">
+            </article>
+            <article class="strength_card card_settings">
                 <div class="strength_text_area">
                     <h2>主な使用言語がpython</h2>
                     <h3 class="overflow_wrap">プログラミング言語においてアプリ開発はもちろん
@@ -148,27 +149,27 @@
                 <div class="strength_img_area">
                     <img class="strength_img" src="img/python.jpg">
                 </div>
-            </div>
+            </article>
 
         </div>
-    </div>
-    <div class="frame_lesson frame_settings">
+    </section>
+    <section class="frame_lesson frame_settings">
         <h1>どんな講座が受けられるの？</h1>
         <div class="lesson_area">
-            <div class="lesson_tiktok card_settings">
-            </div>
+            <article class="lesson_tiktok card_settings">
+            </article>
             <div class="lesson_name_time_content">
                 <div class="lesson_name_time">
-                    <div class="lesson_name card_settings">
+                    <article class="lesson_name card_settings">
                         <h2>講座名</h2>
                         <h3>バイブコーディング</h3>
-                    </div>
-                    <div class="lesson_time card_settings">
+                    </article>
+                    <article class="lesson_time card_settings">
                         <h2>講座時間</h2>
                         <h3>1時間</h3>
-                    </div>
+                    </article>
                 </div>
-                <div class="lesson_content card_settings">
+                <article class="lesson_content card_settings">
                     <h2>講座内容</h2>
                     <h3 class="overflow_wrap">AIにこんな機能が欲しいと言葉で伝えるだけで、
                         プログラムが目の前で次々と組み上がります。
@@ -216,17 +217,17 @@
 </svg>
 
                     </div>
-                </div>
+                </article>
             </div>
         </div>
-    </div>
-    <div class="frame_youtube frame_settings">
+    </section>
+    <section class="frame_youtube frame_settings">
         <h1>実際の授業動画を見てみよう！</h1>
         <div>
             <iframe width="1000" height="600" src="https://www.youtube.com/embed/Lz24PqZkF2s?si=fnusLb5QnXY-aLIS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"  allowfullscreen></iframe>
         </div>
-    </div>
-    <div class="frame_flow frame_settings">
+    </section>
+    <section class="frame_flow frame_settings">
         <h1>通常授業までの流れを見てみよう！</h1>
         <div class="flow_card card_settings">
             <div class="flow_area">
@@ -297,8 +298,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="frame_cta frame_settings">
+    </section>
+    <section class="frame_cta frame_settings">
         <div class="cta_card card_settings">
             <div class="cta_text">
                 <h1>さあBeEnに行こう!</h1>
@@ -312,46 +313,53 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="frame_voice frame_settings">
+    </section>
+    <section class="frame_voice frame_settings">
         <h1>利用者や講師の声を聞いてみよう!</h1>
         <div class="voice_card_area">
-            <div class="voice_card card_settings gradation">
+            <article class="voice_card card_settings gradation">
                 <h2>生徒<br>田中清磨君(16)</h2>
                 <h3 class="overflow_wrap">白熱した集団授業の中でプログラミングに対して熱中してます
                     。自分だけのものが作れてサイコーです。</h3>
-                <img class="voice_img" src="img/kid.png">
-            </div>
-            <div class="voice_card card_settings gradation">
+                <div class="voice_img_area">
+                    <img class="voice_img" src="img/kid.png">
+                </div>
+            </article>
+            <article class="voice_card card_settings gradation">
                 <h2>講師<br>岩瀬裕太(19)</h2>
                 <h3 class="overflow_wrap"> プログラミングならではの面白さはもちろん魅力
                     について全力で熱心にサポートしていきます！BeEnで待っています！</h3>
-                <img class="voice_img" src="img/teacher.png">
-            </div>
-            <div class="voice_card card_settings gradation">
+                <div class="voice_img_area">
+                    <img class="voice_img" src="img/teacher.png">
+                </div>
+            </article>
+            <article class="voice_card card_settings gradation">
                 <h2>保護者<br>田中一豊</h2>
                 <h3 class="overflow_wrap">息子は興味がないものには全く興味なく、
                     何をしても続かないような子でしたが、講師陣のサポートにより続いています。</h3>
-                <img class="voice_img" src="img/parent.png">
-            </div>
+                <div class="voice_img_area">
+                    <img  class="voice_img" src="img/parent.png">
+                </div>
+            </article>
         </div>
-    </div>
-    <div class="frame_price frame_settings">
+    </section>
+    <section class="frame_price frame_settings">
         <h1>料金体系</h1>
         <div class="price_card_area">
-            <div class="price_card card_settings">
+            <article class="price_card card_settings">
                 <div class="price_title">通常講座</div>
                 <div class="price_yen">￥25,800/月</div>
-            </div>
-            <div class="price_card card_settings">
+            </article>
+            <article class="price_card card_settings">
                 <div class="price_title">pythonマスター</div>
                 <div class="price_yen">￥20,000</div>
-            </div>
+            </article>
         </div>
-    </div>
-    <div class="frame_time_place frame_settings">
-        <div class="time_place_area">
-            <div class="time_place_card card_settings">
+    </section>
+    <section class="frame_schedule_place frame_settings">
+        <h1>日時・場所</h1>
+        <div class="schedule_place_area">
+            <div class="schedule_place_card card_settings">
                 <div class="schoolname_area">
                     <div class="schoolname_text">京大本校</div>
                     <div class="schoolname_text">梅田校</div>
@@ -359,28 +367,158 @@
                     <div class="schoolname_text">横浜校</div>
                     <div class="schoolname_text">首里校</div>
                 </div>
-                <div class="time_area">
-                    <div class="free_time_area">
+                <div class="schedule_area">
+                    <div class="free_schedule_area">
                         <h2>webページ開発体験(1日)</h2>
-                        <div class="free_times">
-                            <div class="free_time"></div>
-                            <div class="free_time"></div>
-                            <div class="free_time"></div>
-                            <div class="free_time"></div>
+                        <div class="free_schedules">
+                            <div class="free_schedule">
+                                <div class="free_date">7/19</div>
+                                <div class="free_day blue_saturday">土</div>
+                                <div class="free_time">12:00~13:00</div>
+                            </div>
+                            <div class="free_schedule">
+                                <div class="free_date">7/26</div>
+                                <div class="free_day blue_saturday">土</div>
+                                <div class="free_time">12:00~13:00</div>
+                            </div>
+                            <div class="free_schedule">
+                                <div class="free_date">8/11</div>
+                                <div class="free_day blue_saturday">土</div>
+                                <div class="free_time">12:00~13:00</div>
+                            </div>
+                            <div class="free_schedule">
+                                <div class="free_date"></div>
+                                <div class="free_day"></div>
+                                <div class="free_time"></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="python_time_area">
+                    <div class="python_schedule_area">
                         <h2>pythonマスター(2日)</h2>
-                        <div class="python_times">
-                            <div class="python_time"></div>
-                            <div class="python_time"></div>
-                            <div class="python_time"></div>
-                            <div class="python_time"></div>
+                        <div class="python_schedules">
+                            <div class="python_schedule">
+                                <div class="python_schedule_1">
+                                    <div class="free_date">7/19</div>
+                                    <div class="free_day red_sunday">日</div>
+                                    <div class="free_time">14:00~18:30</div>
+                                </div>
+                                <div class="python_schedule_2">
+                                    <div class="free_date">20</div>
+                                    <div class="free_day">月</div>
+                                    <div class="free_time">14:00~18:30</div>
+                                </div>
+                            </div>
+                            <div class="python_schedule">
+                                 <div class="python_schedule_1">
+                                    <div class="free_date">7/25</div>
+                                    <div class="free_day blue_saturday">土</div>
+                                    <div class="free_time">14:00~18:30</div>
+                                </div>
+                                <div class="python_schedule_2">
+                                    <div class="free_date">26</div>
+                                    <div class="free_day red_sunday">日</div>
+                                    <div class="free_time">14:00~18:30</div>
+                                </div>
+                            </div>
+                            <div class="python_schedule">
+                                 <div class="python_schedule_1">
+                                    <div class="free_date">8/08</div>
+                                    <div class="free_day blue_saturday">土</div>
+                                    <div class="free_time">14:00~18:30</div>
+                                </div>
+                                <div class="python_schedule_2">
+                                    <div class="free_date">09</div>
+                                    <div class="free_day red_sunday">日</div>
+                                    <div class="free_time">14:00~18:30</div>
+                                </div>
+                            </div>
+                            <div class="python_schedule">
+                                 <div class="python_schedule_1">
+                                    <div class="free_date">8/15</div>
+                                    <div class="free_day blue_saturday">土</div>
+                                    <div class="free_time">14:00~18:30</div>
+                                </div>
+                                <div class="python_schedule_2">
+                                    <div class="free_date">16</div>
+                                    <div class="free_day red_sunday">日</div>
+                                    <div class="free_time">14:00~18:30</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="access_button">アク<br>セス</div>
             </div>
         </div>
-    </div>
+    </section>
+    <section class="frame_cta frame_settings">
+        <div class="cta_card card_settings">
+            <div class="cta_text">
+                <h1>さあBeEnに行こう!</h1>
+            </div>
+            <div class="cta_button_area">
+                <div class="button_free_back card_settings">
+                    <div class="button_free_text">体験会に参加する→</div>
+                </div>
+                <div class="button_lesson_back">
+                    <div class="button_lesson_text">講座に参加する→</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="frame_application frame_settings">
+        <h1>申し込みフォーム</h1>
+        <div class="application_card card_settings">
+            <div class="enter_form_area">
+                <div class="enter_forms_1">
+                    <div class="enter_form">
+                        <label for="name"><span>*</span>お名前</label>
+                        <input id="name" placeholder="例:山田エンジン">
+                    </div>
+                    <div class="enter_form">
+                        <label for="name"><span>*</span>年齢</label>
+                        <input id="name" placeholder="例:15">
+                    </div>
+                    <div class="enter_form">
+                        <label for="name"><span>*</span>学校名</label>
+                        <input id="name" placeholder="例:wao中学校">
+                    </div>
+                    <div class="enter_form">
+                        <label for="name"><span>*</span>開催場所</label>
+                        <input id="name" placeholder="">
+                    </div>
+                    <div class="enter_form">
+                        <label for="name"><span>*</span>電話番号</label>
+                        <input id="name" placeholder="">
+                    </div>
+               </div>
+               <div class="enter_forms_2">
+                    <div class="enter_form">
+                        <label for="name"><span>*</span>お名前(ふりがな)</label>
+                        <input id="name" placeholder="例:やまだえんじん">
+                    </div>
+                    <div class="enter_form">
+                        <label for="name"><span>*</span>学年</label>
+                        <input id="name" placeholder="例:中学三年">
+                    </div>
+                    <div class="enter_form">
+                        <label for="name"><span>*</span>無料体験/選択講座</label>
+                        <input id="name" placeholder="例:">
+                    </div>
+                    <div class="enter_form">
+                        <label for="name"><span>*</span>開講日時</label>
+                        <input id="name" placeholder="例:山田エンジン">
+                    </div>
+                    <div class="enter_form">
+                        <label for="name"><span>*</span>メール</label>
+                        <input id="name" placeholder="for_example@gmail.com">
+                    </div>
+               </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        
+    </footer>
 </body>
 </html>
