@@ -9,8 +9,7 @@
 /*共通設定*/
 .frame_settings{
     margin:0 auto 160px auto;
-    max-width: 1000px;
-    width: 95%;
+    width: clamp(360px,calc(100vw*1000/1440),1000px);
 }
 
 .card_settings{
@@ -72,6 +71,8 @@ body{
     background-color: #ffffff;
     z-index: 9999;
     display: flex;
+    opacity:1;
+    /*フェイクで透明度０*/
 }
 
 .header_icon{
@@ -124,19 +125,20 @@ body{
 
 /*ファーストビュー*/
 .first_view{
-    position: relative;
+    position:sticky;
+    top:100vh;
+    inset: 0;
+    z-index: 1;
 }
 
 .first_view_img{
-    width:100%;
     height: 704px;
     object-fit: cover;
+    width: 100%;
 }
 
 .first_view_title{
-    position:absolute;
-    top:128px;
-    left:88px;
+    margin:128px 0px 0px 88px;
     font-size: 96px;
     line-height: 96px;
     font-weight: bold;
@@ -144,9 +146,11 @@ body{
 }
 
 .first_view_sub{
-    position: absolute;
-    top:336px;
-    left:96px;
+    margin:16px 0px 0px 96px;
+}
+
+.arrow{
+    margin: 40px auto 40px auto ;
 }
 
 .arrow_text{
@@ -155,18 +159,24 @@ body{
     font-size: 128px;
     font-weight: bold;
     display: block;
-    margin:0 auto ;
+    margin:0px auto ;
     transform: rotate(90deg);
 }
 
+.first_view_content{
+    position: absolute;
+    top:0;
+    left: 0;
+    opacity: 1;
+    /*フェイクで透明度０*/
+}
+
 .first_button_area{
-    margin-left: 96px;
     display: flex;
     flex-direction: column;
     gap:8px;
-    position: absolute;
-    bottom:128px;
     align-items: flex-start;
+    margin: 48px 0px  0px 96px;
 }
 
 .button_free_back{
@@ -207,7 +217,6 @@ body{
     margin:104px auto 160px auto;
     display: flex;
     gap:0;
-    border: solid 1px black;
 }
 
 .programming_card{
@@ -215,7 +224,6 @@ body{
     height:184px;
     border-radius: 25px;
     padding:40px;
-    border: solid 1px black;
 }
 
 .programming_svg{
@@ -223,20 +231,17 @@ body{
     height: 264px;
     display: flex;
     gap:0;
-    border: solid 1px black;
     margin:auto auto 0 0;
 }
 
 .monitor{
     width: 360px;
     height:240px; 
-    border: solid 1px black;
     margin:auto 0 0 0;
 }
 .type_woman{
     width: 144px;
     height: 112px;
-    border: solid 1px black;
     margin:auto 0 0 0;
 }
 
@@ -250,14 +255,16 @@ body{
 
 /*プログラミングの魅力について知ろう。*/
 .frame_programming_attractive{
-    height:680px;
+    height:fit-content;
 }
 
 .attractive_card_area{
-    width:1000px;
-    height: 600px;
+    width:100%;
+    height: fit-content;
     display: flex;
     justify-content: space-between;
+    margin: 0 auto;
+    border:solid 1px black;
 }
 
 .attractive_card{
@@ -270,12 +277,10 @@ body{
 
 .attractive_title{
     margin-bottom: 24px;
-    border:solid 1px black;
 }
 
 .attractive_text{
     max-height: 184px;
-    border:solid 1px black;
 }
 
 .attractive_svg_area{
@@ -283,7 +288,6 @@ body{
     align-items: center;
     justify-content: center;
     margin:auto auto 0 auto;
-    border:solid 1px black;
     width:200px;
     height:200px;
 }
@@ -295,69 +299,116 @@ body{
     border:solid 1px black;
 }
 
+@media(max-width:1024px){
+    .attractive_card_area{
+        flex-direction: column;
+        align-items: center;
+        gap:16px
+    }
+}
+
 
 /*BeEngineerの強みを見てみよう！*/
 .frame_strength{
-    height:792px;
+    height:fit-content;
 }
 
+
+
 .strength_card_area{
-    width:1000px;
-    height:712px;
+    width:100%;
+    height:fit-content;
     display: flex;
     flex-direction: column;
     gap:32px;
+    border: solid 1px black;
+    align-items: center;
 }
 
 .strength_card{
-    width:1000px;
-    height:216px;
+    width:fit-content;
+    height:fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
     gap:0;
-    border:solid 1px black;
+    padding: 8px;
+}
+
+
+.strength_card:hover{
+    background-color: #208200;
+    transition: 10ms;
 }
 
 .strength_text_area{
     display: block;
     width:504px;
-    height: 216px;
-    border:solid 1px black;
-    padding:56px 0 0 40px;
+    height: fit-content;
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 56px;
 }
 
 
-.strength_card h2{
-    margin-bottom: 8px;
-    border:solid 1px black;
+
+
+.strength_card:hover h2{
+    color:#ffffff;
+    transition: 10ms;
 }
 
 .strength_card h3{
     max-width: 368px;
-    border:solid 1px black;
+}
+
+.strength_card:hover h3{
+    color:#ffffff;
+    transition: 10ms;
 }
 
 .strength_img_area{
     display: flex;
-    width:496px;
-    height: 216px;
-    border:solid 1px black;
+    width:480px;
+    height:184px;
+    padding: 8px;    
 }
 
 .strength_img{
-    width:480px;
-    height:184px;
+    width:100%;
+    height:100%;
     object-fit: cover;
     margin: auto 0;
     border-radius: 24px;
 }
 
+@media(max-width:1024px){
+    .strength_card_area{
+        margin: 0 auto;
+    }
+
+    .strength_card{
+        flex-direction: column;
+    }
+
+    .strength_img_area{
+        width: 424px;
+        height: 160px;
+    }
+
+    .strength_text_area{
+        padding: 8px 0px 8px 54px;
+    }
+}
+
 
 /*どのような講座が受けられるの？*/
 .lesson_area{
-    width:1000px;
-    height: 584px;
+    width:100%;
+    height: fit-content;
     display: flex;
     gap: 32px;
 }
@@ -386,21 +437,19 @@ body{
     width: 304px;
     height: 120px;
     padding:16px 32px;
-    border:solid 1px black;
     display: flex;
     flex-direction: column;
 }
 
 .lesson_name h2, .lesson_time h2 ,.lesson_content h2{
     margin-bottom: 24px;
-    border:solid 1px black;
 }
 
 .lesson_name h3 , .lesson_time h3{
     font-size: 24px;
     font-weight: 500;
     margin: 0 auto;
-    border:solid 1px black;
+
 }
 
 .lesson_content{
@@ -421,22 +470,36 @@ body{
 
 }
 
-/*授業風景を見てみよう！*/
-.frame_youtube{
-    height: 680px;
+@media(max-width:1024px){
+    .lesson_area{
+        flex-direction: column;
+        align-items:center;
+    }
 }
 
+/*授業風景を見てみよう！*/
+.frame_youtube{
+    height: fit-content;
+    border: solid 1px black;
+}
+
+.frame_youtube iframe{
+    width: 100%;
+    aspect-ratio: 16/9;
+}
 
 
 /*授業風景を見てみよう！*/
 .flow_card{
-    width:1000px;
+    width:100%;
+    max-width:1000px;
     height:192px;
     padding-top:24px;
 }
 
 .flow_elements{
-    width:1000px;
+    width:100%;
+    max-width:1000px;
     height:104px;
     display:flex;
     gap: 40px;
@@ -453,7 +516,8 @@ body{
 }
 
 .flow_texts{
-    width:1000px;
+    width:100%;
+    max-width:1000px;
     height:24px;
     position:relative;
 }
@@ -484,8 +548,9 @@ body{
 }
 
 .cta_card{
-    width:1000px;
-    height: 200px;
+    width:100%;
+    max-width:1000px;
+    height:fit-content;
     padding:32px;
 }
 
@@ -495,16 +560,14 @@ body{
     padding:0;
     text-align:initial;
     margin-bottom: 24px;
-    border:solid 1px black;
 }
 
 .cta_button_area{
     display: flex;
-    height: 72px;
+    height: fit-content;
      justify-content: center;
     gap:64px;
     margin:center;
-    border:solid 1px black;
 }
 
 .cta_button_area .button_free_back{
@@ -527,9 +590,19 @@ body{
     padding: 18px;
 }
 
+@media(max-width:1185px){
+    .cta_button_area{
+        flex-direction: column;
+        gap:24px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
 /*生徒や講師の声を聞いてみよう！*/
 .frame_voice{
-    height:592px;
+    height:fit-content;
 }
 
 .voice_card_area{
@@ -575,17 +648,16 @@ body{
     margin-bottom: 24px;
     z-index: 101;
     position: relative;
-    border:solid 1px black;
+
 
     
 }
 
 .voice_card h3{
-    width:216px;
+    max-width: 216px;
+    width: 100%;
     z-index: 100;
     position: relative;
-    border:solid 1px black;
-
 }
 
 
@@ -618,6 +690,12 @@ body{
     backdrop-filter: blur(4px);
 }
 
+@media(max-width:1200px){
+    .voice_card_area{
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
 /*料金体系*/
 .frame_price{
@@ -625,7 +703,8 @@ body{
 }
 
 .price_card_area{
-    width:1000px;
+    width:100%;
+    max-width:1000px;
     height:204px;
     display: flex;
     gap:24px;
@@ -643,7 +722,6 @@ body{
     font-weight: bold;
     margin-bottom: 24px;
     text-align: center;
-    border:solid 1px black;
 
 }
 
@@ -653,17 +731,36 @@ body{
     font-weight: bold;
     color:#208200;
     text-align: center;
-    border:solid 1px black;
 
 }
 
 /*日時・場所*/
+.frame_schedule_place{
+    height: 960px;
+    border: solid 1px black;
+}
+
 .schedule_place_card{
     height:880px;
     width:100%;
     display: flex;
     flex-direction: column;
     gap:40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.front_back_area{
+    transform-style: preserve-3d;
+    transition: transform .6s;
+}
+
+
+
+.card_back{
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
 }
 
 .schoolname_area{
@@ -687,6 +784,12 @@ body{
     border: solid 1px #208200;
 }
 
+.schoolname_choice_color{
+    color: #ffffff;
+    background-color:#208200;
+    border: solid 1px #000000 inset;
+}
+
 .schedule_area{
     display: flex;
     gap:0;
@@ -701,7 +804,7 @@ body{
     
 }
 
-.schedule_area h2,.python_schedule_area h2{
+.schedule_area h2,.python_schedule_area h2,.school_img_area h2,.place_area h2{
     color: black;
     margin-top: 24px;
 }
@@ -752,6 +855,10 @@ body{
     line-height: 24px;
 }
 
+.free_day:empty{
+    display: none;
+}
+
 .free_time{
     border: none;
     
@@ -777,23 +884,163 @@ body{
     font-weight: bold;
 }
 
+.place_access_area{
+    display: flex;
+    gap:24px;
+    margin: 0 auto;
+}
+
+.school_img_area , .place_area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:24px
+}
+
+.school_img img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+.place_map iframe{
+    height: 200px;
+    width: 400px;
+    border-radius: 24px;
+}
+
+.map_h1_area{
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+@media(max-width:1200px){
+    .schoolname_area{
+    display: flex;
+    gap:8px;
+    }
+}
+
+/*FAQ*/
+.faq_area{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap:16px;
+    max-width:1000px;
+    width: 100%;
+}
+
+.frame_faq{
+    height: min-content;
+}
+
+.faq_element{
+    width:100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap:0px;
+    padding:16px;
+}
+
+.faq_element_q{
+    width: 100%;
+    display: flex;
+    gap:0px;
+    align-items: center;
+    
+}
+
+.faq_element_a{
+    display: flex;
+    gap:16px;
+    align-items:flex-start;
+    max-height: 0px;
+    overflow: hidden;
+}
+
+
+.faq_content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border:solid 1px black;
+}
+
+.faq_text{
+    display: flex;
+    align-items: center;
+    gap:16px;
+    border:solid 1px black;
+}
+
+
+.faq_title{
+    font-size: 24px;
+    line-height: 24px;
+    color: #208200;
+    font-weight: bold;
+    width: 24px;
+}
+
+.faq_element_a div{
+    margin-left: 3px;
+    color: #f04830;
+}
+
+.faq_element_a h3,.faq_element_q h3:not(.faq_button){
+    width: fit-content;
+}
+
+.faq_button{
+    width: 24px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 16px;
+    border:solid 1px black;
+}
+
+.faq_element_a.faq_open{
+    max-height: 300px;
+    margin-top: 16px;
+    transition:.4s;
+}
+
+.faq_button.arrow_rotate{
+    transform: rotate(180deg);
+}
+
+
 /*申し込みフォーム*/
 .frame_application{
-    height:992px;
+    height:fit-content;
 }
 
 .application_card{
-    width:1000px;
-    height:912px;
+    width:100%;
+    max-width:1000px;
+    height:fit-content;
     display: flex;
+    padding: 64px 32px 64px 32px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .enter_form_area{
-    width: 720px;
-    height:656px;
+    width: fit-content;
+    height:fit-content;
     display: flex;
     gap:80px;
-    margin: 64px auto auto auto;
+    border: solid 1px black;
+    margin: 0 auto;
 }
 
 .enter_forms_1 , .enter_forms_2{
@@ -828,10 +1075,105 @@ body{
     color: #f04830;
 }
 
+@media(max-width:1200px){
+    .enter_form_area{
+    gap:56px;
+    flex-direction: column;
+    }
+}
+
+.form_submit{
+    width: fit-content;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #f04830;
+    padding: 8px 16px;
+    border-radius: 20px;
+    margin-top: 24px;
+
+}
 
 /*フッター*/
 footer{
     height: 224px;
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    background-color: ;
+    background-color: #d9d9d9;
+}
+
+.footer_logo{
+    margin: 24px auto 36px 264px;
+}
+
+
+.footer_element_up{
+    display: flex;
+    gap:120px;
+    margin:0 auto 36px auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_element_down{
+    display: flex;
+    gap:72px;
+    margin:0 auto 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*偽ファーストビュー*/
+.fake_first_view{
+    position:fixed;
+    width: 100%;
+    height: 100vh;
+    inset: 0;
+    z-index: 10;
+    pointer-events: none;
+}
+
+
+.svg_text{
+    font-weight: 900;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: clamp(4.5rem,22vw,16rem);
+    transform-origin: center center;
+}
+
+.sum_mask{
+    fill:#208200;
+    mask:url(#text_mask);
+    
+}
+
+.scroll_space{
+    height: 200vh;
+}
+
+/*日時日付クリックアニメーション*/
+.front_back_area{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(0);
+}
+
+.schedule_place_area{
+    position: relative;
+    perspective: 10000px;
+}
+
+.front_back_area.rotate{
+    transform: rotateY(180deg);
+}
+
+.front_back_area.active{
+    position: absolute;
+    inset: 0;
+    opacity: 1;
+    pointer-events: auto;
 }
