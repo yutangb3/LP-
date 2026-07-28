@@ -1,5 +1,6 @@
 /*スクロールアニメーション*/
-    const school_buttons=document.querySelectorAll('.schoolname_text');
+document.addEventListener('DOMContentLoaded',()=>{
+const school_buttons=document.querySelectorAll('.schoolname_text');
     const rotate_buttons=document.querySelectorAll('.access_button');
     const cards=document.querySelectorAll('.schedule_place_card');
     const front_back_area=document.querySelectorAll('.front_back_area');

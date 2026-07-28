@@ -213,15 +213,16 @@ body{
 
 /*プログラミングとは*/
 .frame_programming{
-    height: 320px;
+    height: fit-content;
     margin:104px auto 160px auto;
     display: flex;
     gap:0;
 }
 
 .programming_card{
-    width: 496px;
-    height:184px;
+    max-width: 496px;
+    width: fit-content;
+    height: 100%;
     border-radius: 25px;
     padding:40px;
 }
@@ -253,6 +254,20 @@ body{
     margin-bottom: 16px;
 }
 
+.programming_text{
+    max-width: fit-content;
+}
+
+@media(max-width:1130px){
+    .frame_programming{
+        flex-direction: column;
+        align-items: center;
+    }
+    .programming_svg{
+        margin: 0;
+    }
+}
+
 /*プログラミングの魅力について知ろう。*/
 .frame_programming_attractive{
     height:fit-content;
@@ -262,7 +277,7 @@ body{
     width:100%;
     height: fit-content;
     display: flex;
-    justify-content: space-between;
+    gap:40px;
     margin: 0 auto;
     border:solid 1px black;
 }
@@ -299,7 +314,7 @@ body{
     border:solid 1px black;
 }
 
-@media(max-width:1024px){
+@media(max-width:1200px){
     .attractive_card_area{
         flex-direction: column;
         align-items: center;
