@@ -3,7 +3,6 @@
     padding:0;
     margin:0;
     box-sizing: border-box;
-    border:solid 1px black;
 }
 
 /*共通設定*/
@@ -369,7 +368,6 @@ a{
 /*プログラミングの魅力について知ろう。*/
 .frame_programming_attractive{
     height:fit-content;
-    border:solid 1px black;
     width: fit-content;
 }
 
@@ -379,7 +377,6 @@ a{
     display: flex;
     gap:40px;
     margin: 0 auto;
-    border:solid 1px black;
 }
 
 .attractive_card{
@@ -540,7 +537,6 @@ a{
 /*どのような講座が受けられるの？*/
 .frame_lesson{
     height: fit-content;
-    border:solid 1px black;
     width: fit-content;
 }
 
@@ -550,7 +546,6 @@ a{
     height: fit-content;
     display: flex;
     gap: 32px;
-    border:solid 1px black;
 }
 
 .lesson_tiktok{
