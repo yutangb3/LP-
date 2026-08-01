@@ -49,4 +49,16 @@ const school_buttons=document.querySelectorAll('.schoolname_text');
             }
         });
     });
+
+    const hamburger_menu=document.querySelector('.hamburger_menu');
+    const header_menu=document.querySelector('.header_menus');
+    hamburger_menu.addEventListener('click',()=>{
+        header_menu.classList.toggle('hide');
+    });
+
+    header_menu.querySelectorAll('a').forEach(button=>{
+        button.addEventListener('click',()=>{
+            header_menu.classList.toggle('hide');
+        });
+    });
 });

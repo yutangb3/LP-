@@ -3,13 +3,14 @@
     padding:0;
     margin:0;
     box-sizing: border-box;
+    border:solid 1px black;
 }
-
 
 /*共通設定*/
 .frame_settings{
     margin:0 auto 160px auto;
-    width: clamp(360px,calc(100vw*1000/1440),1000px);
+    width:95%;
+    max-width: 1000px;
 }
 
 .card_settings{
@@ -50,6 +51,9 @@ body{
     background-color: #F5F5F7;
 }
 
+a{
+    text-decoration: none;
+}
 
 /*個別設定*/
 /*ヘッダー*/
@@ -68,6 +72,7 @@ body{
     top:0;
     width:100%;
     height: calc(100vh*88/1024);
+    /*px表示*/
     background-color: #ffffff;
     z-index: 9999;
     display: flex;
@@ -92,11 +97,16 @@ body{
     align-items: center;
 }
 
-.header_menu_area>*{
+.header_menus{
+    display: flex;
+    gap:24px;
+}
+
+.header_menus>*{
     font-size: 16px;
     line-height: 16px;
     font-weight: bold;
-
+    color: #000000;
 }
 
 .header_menu_area .button_free_back{
@@ -122,7 +132,52 @@ body{
     padding: 8px;  
 }
 
+.hamburger_menu{
+    display: none;
+}
 
+@media(max-width:1200px){
+    .header_menu_area .button_free_back,.header_menu_area .button_lesson_back{
+        display: none;
+    }
+
+    .hamburger_menu{
+        margin: auto calc(100%*24/1024) auto auto;
+        display: block;
+        height: fit-content;
+        position:absolute;
+        top: 40px;
+        right: 20px;
+    }
+
+    .hamburger_menu>*{
+        display: block;
+        width: 50px;
+        height: 6px;
+        background-color: #000000;
+        margin-top: 8px;
+    }
+
+    .header_menus{
+        width: 300px;
+        height: 100vh;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        gap:16px;
+        align-items: center;
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        margin: 0;
+        padding-top: 120px;
+        transition: transform 0.5s ease-in; 
+    }
+    
+    .header_menus.hide{
+        transform: translateX(100%)
+    }
+}
 /*ファーストビュー*/
 .first_view{
     position:sticky;
@@ -135,10 +190,11 @@ body{
     height: 704px;
     object-fit: cover;
     width: 100%;
+    object-position: right;
 }
 
 .first_view_title{
-    margin:128px 0px 0px 88px;
+    margin:128px 0px 0px calc(100vw*88/1440);
     font-size: 96px;
     line-height: 96px;
     font-weight: bold;
@@ -146,7 +202,9 @@ body{
 }
 
 .first_view_sub{
-    margin:16px 0px 0px 96px;
+    margin:16px 616px 0px 96px;
+    max-width: 500px;
+    width: fit-content;
 }
 
 .arrow{
@@ -211,6 +269,27 @@ body{
     padding:14px;
 }
 
+@media(max-width:970px){
+    .first_view_sub{
+        display: none;
+    }
+
+    .first_button_area{
+        margin: 48px 0px  0px 96px;
+    }
+}
+
+@media(max-width:824px){
+    .first_view_title{
+        font-size:80px;
+        line-height: 80px;
+    }
+
+    .first_view_img{
+        object-position: right 70%;
+    }
+}
+
 /*プログラミングとは*/
 .frame_programming{
     height: fit-content;
@@ -228,7 +307,8 @@ body{
 }
 
 .programming_svg{
-    width:480px;
+    max-width:480px;
+    width: 95%;
     height: 264px;
     display: flex;
     gap:0;
@@ -237,13 +317,13 @@ body{
 
 .monitor{
     width: 360px;
-    height:240px; 
     margin:auto 0 0 0;
+    aspect-ratio: 360/240;
 }
 .type_woman{
     width: 144px;
-    height: 112px;
     margin:auto 0 0 0;
+    aspect-ratio: 144/112;
 }
 
 .programming_h1{
@@ -263,14 +343,34 @@ body{
         flex-direction: column;
         align-items: center;
     }
+
     .programming_svg{
         margin: 0;
+        height: fit-content;
+        margin-top: 16px;
+    }
+
+    .type_woman{
+        width: 30%;
+    }
+
+    .monitor{
+        width: 70%;
+        
     }
 }
 
+
+@media(max-width:560px){
+    .programming_svg{
+        width: 95%;
+    }
+}
 /*プログラミングの魅力について知ろう。*/
 .frame_programming_attractive{
     height:fit-content;
+    border:solid 1px black;
+    width: fit-content;
 }
 
 .attractive_card_area{
@@ -311,7 +411,6 @@ body{
 .attractive_svg{
     width:200px;
     height:200px;
-    border:solid 1px black;
 }
 
 @media(max-width:1200px){
@@ -336,7 +435,6 @@ body{
     display: flex;
     flex-direction: column;
     gap:32px;
-    border: solid 1px black;
     align-items: center;
 }
 
@@ -400,7 +498,7 @@ body{
     border-radius: 24px;
 }
 
-@media(max-width:1024px){
+@media(max-width:1080px){
     .strength_card_area{
         margin: 0 auto;
     }
@@ -420,22 +518,50 @@ body{
 }
 
 
+@media(max-width:600px){
+    .strength_card{
+        width:95%;
+    }
+    .strength_text_area{
+        width: 95%;
+        padding: 8px 32px;
+
+    }
+
+    .strength_img{
+        width: 100%;
+    }
+
+    .school_img_area{
+        width: 95%;
+    }
+}
+
 /*どのような講座が受けられるの？*/
+.frame_lesson{
+    height: fit-content;
+    border:solid 1px black;
+    width: fit-content;
+}
+
 .lesson_area{
-    width:100%;
+    max-width:1000px;
+    width: 100%;
     height: fit-content;
     display: flex;
     gap: 32px;
+    border:solid 1px black;
 }
 
 .lesson_tiktok{
     width: 344px;
     height: 584px;
+    flex-shrink: 0;
 }
 
 .lesson_name_time_content{
     width:624px;
-    height:584px;
+    height:fit-content;
     display: flex;
     flex-direction: column;
     gap:16px;
@@ -443,7 +569,7 @@ body{
 
 .lesson_name_time{
     width:624px;
-    height:120px;
+    height:fit-content;
     display: flex;
     gap:16px;
 }
@@ -475,7 +601,8 @@ body{
 
 .lesson_content h3{
     margin-top: 24px;
-    width:560px;
+    max-width:560px;
+    height: fit-content;
 }
 
 .lesson_svg{
@@ -485,17 +612,37 @@ body{
 
 }
 
-@media(max-width:1024px){
+@media(max-width:1080px){
     .lesson_area{
         flex-direction: column;
         align-items:center;
+    }
+
+    .frame_lesson{
+        width: clamp(360px,calc(100vw*1000/1440),1000px);
+    }
+}
+
+@media(max-width:760px){
+    .lesson_name_time{
+        flex-direction: column;
+        align-items: center;
+        width: fit-content;
+    }
+
+    .lesson_name , .lesson_time,.lesson_content{
+        width: 344px;
+    }
+
+    .lesson_name_time_content{
+        align-items: center;
+        width: fit-content;
     }
 }
 
 /*授業風景を見てみよう！*/
 .frame_youtube{
     height: fit-content;
-    border: solid 1px black;
 }
 
 .frame_youtube iframe{
@@ -580,17 +727,11 @@ body{
 .cta_button_area{
     display: flex;
     height: fit-content;
-     justify-content: center;
+    justify-content: center;
     gap:64px;
-    margin:center;
 }
 
 .cta_button_area .button_free_back{
-    border-radius: 36px;
-    box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
-}
-
-.cta_button_area .button_lesson_back{
     border-radius: 36px;
     box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
 }
@@ -600,10 +741,6 @@ body{
     padding:18px;
 }
 
-.cta_button_area .button_lesson_text{
-    font-size: 36px;
-    padding: 18px;
-}
 
 @media(max-width:1185px){
     .cta_button_area{
@@ -611,6 +748,23 @@ body{
         gap:24px;
         justify-content: center;
         align-items: center;
+    }
+
+    .cta_card{
+        width: 60%;
+        margin: 0 auto;
+    }
+}
+
+@media(max-width:760px){
+    .cta_card{
+        width: 95%;
+    }
+}
+
+@media(max-width:500px){
+    .cta_button_area .button_free_text{
+        font-size: 24px;
     }
 }
 
@@ -714,13 +868,13 @@ body{
 
 /*料金体系*/
 .frame_price{
-    height: 264px;
+    height: fit-content;
 }
 
 .price_card_area{
     width:100%;
     max-width:1000px;
-    height:204px;
+    height:fit-content;
     display: flex;
     gap:24px;
 }
@@ -749,10 +903,24 @@ body{
 
 }
 
+@media(max-width:920px){
+    .price_card_area{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+}
+
+@media(max-width:540px){
+    .price_card{
+        width: 95%;
+    }
+}
+
 /*日時・場所*/
 .frame_schedule_place{
     height: 960px;
-    border: solid 1px black;
 }
 
 .schedule_place_card{
@@ -764,6 +932,7 @@ body{
     position: absolute;
     top: 0;
     left: 0;
+    backface-visibility: hidden;
 }
 
 .front_back_area{
@@ -774,9 +943,10 @@ body{
 
 
 .card_back{
-    backface-visibility: hidden;
     transform: rotateY(180deg);
 }
+
+
 
 .schoolname_area{
     height: 88px;
@@ -934,10 +1104,25 @@ body{
     justify-content: flex-start;
 }
 
-@media(max-width:1200px){
+@media(max-width:1250px){
     .schoolname_area{
     display: flex;
     gap:8px;
+    }
+
+    .schedule_area ,.place_access_area{
+        flex-direction: column;
+        gap:16px;
+        align-items: center;
+    }
+
+    .schedule_place_card{
+        height: 1440px;
+        width:100%;
+    }
+
+    .frame_schedule_place{
+        height: 1520px;
     }
 }
 
@@ -986,14 +1171,12 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border:solid 1px black;
 }
 
 .faq_text{
     display: flex;
     align-items: center;
     gap:16px;
-    border:solid 1px black;
 }
 
 
@@ -1019,7 +1202,6 @@ body{
     font-size: 24px;
     font-weight: bold;
     margin-right: 16px;
-    border:solid 1px black;
 }
 
 .faq_element_a.faq_open{
@@ -1054,7 +1236,6 @@ body{
     height:fit-content;
     display: flex;
     gap:80px;
-    border: solid 1px black;
     margin: 0 auto;
 }
 
@@ -1065,7 +1246,8 @@ body{
 }
 
 .enter_form{
-    width:320px;
+    max-width:320px;
+    width: 80%;
     height: 80px;
     display: flex;
     flex-direction: column;
@@ -1106,9 +1288,21 @@ body{
     padding: 8px 16px;
     border-radius: 20px;
     margin-top: 24px;
-
 }
 
+
+@media(max-width:420px){
+    .enter_form input{
+        width: 80%;
+    }
+    .enter_form_area{
+        width: 95%;
+    }
+
+    .enter_forms_1 , .enter_forms_2{
+        padding-left: 10%;
+    }
+}
 /*フッター*/
 footer{
     height: 224px;
@@ -1119,7 +1313,7 @@ footer{
 }
 
 .footer_logo{
-    margin: 24px auto 36px 264px;
+    margin: 24px auto 36px calc(100%*264px/1440px);
 }
 
 
@@ -1139,6 +1333,17 @@ footer{
     align-items: center;
 }
 
+
+@media(max-width:900px){
+    footer{
+        height: fit-content;
+    }
+
+    .footer_element_up,.footer_element_down{
+        flex-direction: column;
+        gap:36px;
+    }
+}
 
 /*偽ファーストビュー*/
 .fake_first_view{

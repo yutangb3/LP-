@@ -26,17 +26,24 @@
 
         </div>
         <nav class="header_menu_area">
-                <div>プログラミングとは</div>
-                <div>BeEngineerの強み</div>
-                <div>開講講座</div>
-                <div>料金</div>
-                <div>日時/アクセス</div>
-                <div>FAQ</div>
+            <div class="header_menus hide">
+                <a href="#programming">プログラミングとは</a>
+                <a href="#strength">BeEngineerの強み</a>
+                <a href="#lesson">開講講座</a>
+                <a href="#price">料金</a>
+                <a href="#schedule">日時/アクセス</a>
+                <a href="#faq">FAQ</a>
+            </div>
                 <div class="button_free_back card_settings">
-                    <div class="button_free_text">体験会に参加する→</div>
+                    <a class="button_free_text" href="#application">体験会に参加する→</a>
                 </div>
                 <div class="button_lesson_back card_settings">
-                    <div class="button_lesson_text">講座に参加する→</div>
+                    <a class="button_lesson_text" href="#application">講座に参加する→</a>
+                </div>
+                <div class="hamburger_menu change">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
         </nav>
     </header>
@@ -45,8 +52,8 @@
             <img class="first_view_img" src="img/first_view.png">
             <div class="first_view_content">
                 <p class="first_view_title">ワクワクを<br>この夏に。</p>
-                <p class="first_view_sub">夏限定講座に参加することであなただけのゲームやwebサイトを作れるよ!<br>
-                                    作品をつくり様々なことを体験し新しい視点が見える！<br>
+                <p class="first_view_sub">夏限定講座に参加することであなただけのゲームやwebサイトを作れるよ!
+                                    作品をつくり様々なことを体験し新しい視点が見える！
                                     未経験でも大丈夫！全力でサポートするよ。まずは知ることから始めよう。</p>
                 <div class="first_button_area">
                     <div class="button_free_back card_settings">
@@ -64,7 +71,7 @@
     <div class="arrow">
         <span class="arrow_text">→</span>
     </div>
-    <section class="frame_programming frame_settings">
+    <section class="frame_programming frame_settings" id="programming">
         <article class="programming_card card_settings">
             <p class="programming_h1">プログラミングとは</p>
             <h3 class="programming_text">プログラミングとはコンピューターを動かすために指
@@ -121,7 +128,7 @@
              </article>
         </div>  
     </section>
-    <section class="frame_strength frame_settings">
+    <section class="frame_strength frame_settings" id="strength">
         <h1>BeEngineerの強みとは？</h1>
         <div class="strength_card_area">
             <article class="strength_card card_settings">
@@ -160,7 +167,7 @@
 
         </div>
     </section>
-    <section class="frame_lesson frame_settings">
+    <section class="frame_lesson frame_settings" id="lesson">
         <h1>どんな講座が受けられるの？</h1>
         <div class="lesson_area">
             <article class="lesson_tiktok card_settings">
@@ -241,10 +248,10 @@
             </div>
             <div class="cta_button_area">
                 <div class="button_free_back card_settings">
-                    <div class="button_free_text">体験会に参加する→</div>
+                    <a class="button_free_text" href="#application">体験会に参加する→</a>
                 </div>
                 <div class="button_lesson_back">
-                    <div class="button_lesson_text">講座に参加する→</div>
+                    <a class="button_lesson_text" href="#application">講座に参加する→</a>
                 </div>
             </div>
         </div>
@@ -278,7 +285,7 @@
             </article>
         </div>
     </section>
-    <section class="frame_price frame_settings">
+    <section class="frame_price frame_settings" id="price">
         <h1>料金体系</h1>
         <div class="price_card_area">
             <article class="price_card card_settings">
@@ -291,20 +298,20 @@
             </article>
         </div>
     </section>
-    <section class="frame_schedule_place frame_settings">
+    <section class="frame_schedule_place frame_settings" id="schedule">
         <h1>日時・場所</h1>
         
         <div class="schedule_place_area">
             <div class="front_back_area active" id="kyoudai">
                 <div class="schedule_place_card card_settings">
-                <div class="schoolname_area">
-                    <div class="schoolname_text schoolname_choice_color" data-target="kyoudai">京大本校</div>
-                    <div class="schoolname_text" data-target="umeda">梅田校</div>
-                    <div class="schoolname_text" data-target="iidabasi">飯田橋校</div>
-                    <div class="schoolname_text" data-target="yokohama">横浜校</div>
-                    <div class="schoolname_text" data-target="syuri">首里校</div>
-                </div>
-                <div class="schedule_area">
+                    <div class="schoolname_area">
+                        <div class="schoolname_text schoolname_choice_color" data-target="kyoudai">京大本校</div>
+                        <div class="schoolname_text" data-target="umeda">梅田校</div>
+                        <div class="schoolname_text" data-target="iidabasi">飯田橋校</div>
+                        <div class="schoolname_text" data-target="yokohama">横浜校</div>
+                        <div class="schoolname_text" data-target="syuri">首里校</div>
+                    </div>
+                    <div class="schedule_area">
                     <div class="free_schedule_area">
                         <h2>webページ開発体験(1日)</h2>
                         <div class="free_schedules">
@@ -929,15 +936,15 @@
             </div>
             <div class="cta_button_area">
                 <div class="button_free_back card_settings">
-                    <div class="button_free_text">体験会に参加する→</div>
+                    <a class="button_free_text" href="#application">体験会に参加する→</a>
                 </div>
                 <div class="button_lesson_back">
-                    <div class="button_lesson_text">講座に参加する→</div>
+                    <a class="button_lesson_text" href="#application">講座に参加する→</a>
                 </div>
             </div>
         </div>
     </section>
-    <section class="frame_faq frame_settings">
+    <section class="frame_faq frame_settings" id="faq">
         <h1>FAQ</h1>
         <div class="faq_area">
             <div class="faq_element card_settings" data-target="faq_1">
@@ -1026,7 +1033,7 @@
             </div>
         </div>
     </section>
-    <section class="frame_application frame_settings">
+    <section class="frame_application frame_settings" id="application">
         <h1>申し込みフォーム</h1>
         <div class="application_card card_settings">
             <div class="enter_form_area">
@@ -1036,42 +1043,42 @@
                         <input id="name" placeholder="例:山田エンジン">
                     </div>
                     <div class="enter_form">
-                        <label for="name"><span>*</span>年齢</label>
-                        <input id="name" placeholder="例:15">
+                        <label for="age"><span>*</span>年齢</label>
+                        <input id="age" placeholder="例:15">
                     </div>
                     <div class="enter_form">
-                        <label for="name"><span>*</span>学校名</label>
-                        <input id="name" placeholder="例:wao中学校">
+                        <label for="school_name"><span>*</span>学校名</label>
+                        <input id="school_name" placeholder="例:wao中学校">
                     </div>
                     <div class="enter_form">
-                        <label for="name"><span>*</span>開催場所</label>
-                        <input id="name" placeholder="">
+                        <label for="place"><span>*</span>開催場所</label>
+                        <input id="place" placeholder="">
                     </div>
                     <div class="enter_form">
-                        <label for="name"><span>*</span>電話番号</label>
-                        <input id="name" placeholder="">
+                        <label for="tel"><span>*</span>電話番号</label>
+                        <input id="tel" placeholder="">
                     </div>
                </div>
                <div class="enter_forms_2">
                     <div class="enter_form">
-                        <label for="name"><span>*</span>お名前(ふりがな)</label>
-                        <input id="name" placeholder="例:やまだえんじん">
+                        <label for="name-kana"><span>*</span>お名前(ふりがな)</label>
+                        <input id="name-kana" placeholder="例:やまだえんじん">
                     </div>
                     <div class="enter_form">
-                        <label for="name"><span>*</span>学年</label>
-                        <input id="name" placeholder="例:中学三年">
+                        <label for="grade"><span>*</span>学年</label>
+                        <input id="grade" placeholder="例:中学三年">
                     </div>
                     <div class="enter_form">
-                        <label for="name"><span>*</span>無料体験/選択講座</label>
-                        <input id="name" placeholder="例:">
+                        <label for="lesson_choice"><span>*</span>無料体験/選択講座</label>
+                        <input id="lesson_choice" placeholder="例:">
                     </div>
                     <div class="enter_form">
-                        <label for="name"><span>*</span>開講日時</label>
-                        <input id="name" placeholder="例:山田エンジン">
+                        <label for="time"><span>*</span>開講日時</label>
+                        <input id="time" placeholder="例:山田エンジン">
                     </div>
                     <div class="enter_form">
-                        <label for="name"><span>*</span>メール</label>
-                        <input id="name" placeholder="for_example@gmail.com">
+                        <label for="mail"><span>*</span>メール</label>
+                        <input id="mail" placeholder="for_example@gmail.com">
                     </div>
                </div>
             </div>
