@@ -4,7 +4,6 @@
     margin:0;
     box-sizing: border-box;
 }
-
 /*共通設定*/
 .frame_settings{
     margin:0 auto 160px auto;
@@ -61,7 +60,7 @@ a{
     top:0;
     content: "";
     background-color: #208200;
-    height: calc(100vh*10/1024);
+    height: 10px;
     width:100%;
     box-shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
@@ -70,12 +69,14 @@ a{
     position: fixed;
     top:0;
     width:100%;
-    height: calc(100vh*88/1024);
+    height: 88px;
     /*px表示*/
     background-color: #ffffff;
     z-index: 9999;
     display: flex;
-    opacity:1;
+    opacity:0;
+    border-bottom: solid 1px black;
+    transition: transform 0.5s;
     /*フェイクで透明度０*/
 }
 
@@ -85,8 +86,8 @@ a{
 }
 
 .header_icon svg{
-    width:calc(100vw*160/1440);
-    height: calc(100vh*64/1024);
+    width:160px;
+    height: 64px;
 }
 
 .header_menu_area{
@@ -135,6 +136,10 @@ a{
     display: none;
 }
 
+.frame_header.scroll_hide{
+    transform: translateY(-100%);
+}
+
 @media(max-width:1200px){
     .header_menu_area .button_free_back,.header_menu_area .button_lesson_back{
         display: none;
@@ -145,7 +150,7 @@ a{
         display: block;
         height: fit-content;
         position:absolute;
-        top: 40px;
+        top: 30px;
         right: 20px;
     }
 
@@ -177,10 +182,11 @@ a{
         transform: translateX(100%)
     }
 }
+
+
 /*ファーストビュー*/
 .first_view{
     position:sticky;
-    top:100vh;
     inset: 0;
     z-index: 1;
 }
@@ -410,7 +416,7 @@ a{
     height:200px;
 }
 
-@media(max-width:1200px){
+@media(max-width:1080px){
     .attractive_card_area{
         flex-direction: column;
         align-items: center;
@@ -525,11 +531,7 @@ a{
 
     }
 
-    .strength_img{
-        width: 100%;
-    }
-
-    .school_img_area{
+    .strength_img_area{
         width: 95%;
     }
 }
@@ -538,6 +540,12 @@ a{
 .frame_lesson{
     height: fit-content;
     width: fit-content;
+    border:solid 1px black;
+}
+
+.frame_lesson .scroll_space_2{
+    height: 2000px;
+    border:solid 1px black;
 }
 
 .lesson_area{
@@ -546,12 +554,31 @@ a{
     height: fit-content;
     display: flex;
     gap: 32px;
+    position: sticky;
+    top: 44px;
+    border:solid 1px black;
 }
+
 
 .lesson_tiktok{
     width: 344px;
     height: 584px;
     flex-shrink: 0;
+    border: solid 10px black;
+    border-radius: 60px;
+    overflow: hidden;
+}
+
+.lesson_tiktok::before{
+    content: "";
+    position: absolute;
+    top:0px;
+    left: 100px;
+    width: 150px;
+    height: 40px;
+    background-color: #000000;
+    border-radius: 16px;
+    z-index: 300;
 }
 
 .lesson_name_time_content{
@@ -560,6 +587,7 @@ a{
     display: flex;
     flex-direction: column;
     gap:16px;
+    position: relative;
 }
 
 .lesson_name_time{
@@ -567,6 +595,14 @@ a{
     height:fit-content;
     display: flex;
     gap:16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.lesson_name_time.active{
+    opacity: 1;
 }
 
 .lesson_name , .lesson_time{
@@ -589,9 +625,24 @@ a{
 }
 
 .lesson_content{
+    position: absolute;
+    top: 0;
+    left:0;
     width:624px;
     height:448px;
     padding:48px 32px;
+    opacity: 0;
+}
+
+.lesson_content.active{
+    opacity: 1;
+}
+
+.lesson_content_area{
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    margin-top: 136px;
 }
 
 .lesson_content h3{
@@ -604,7 +655,27 @@ a{
     width: 304px;
     height: 134px;
     margin:  50px auto;
+}
 
+.tiktok_img{
+    width: 344px;
+    height: 584px;
+    object-fit: cover;
+    display: block;
+}
+
+.track{
+    border: solid 1px black;
+    height: fit-content;
+}
+
+.lesson_text_transition{
+    transform: translateY(100%);
+    transition: transform 1s;
+}
+
+.lesson_text_transition.active{
+    transform: translateY(0%);
 }
 
 @media(max-width:1080px){
@@ -634,6 +705,8 @@ a{
         width: fit-content;
     }
 }
+
+
 
 /*授業風景を見てみよう！*/
 .frame_youtube{
@@ -854,7 +927,7 @@ a{
     backdrop-filter: blur(4px);
 }
 
-@media(max-width:1200px){
+@media(max-width:1080px){
     .voice_card_area{
         flex-direction: column;
         align-items: center;
@@ -1392,3 +1465,6 @@ footer{
     opacity: 1;
     pointer-events: auto;
 }
+
+
+
