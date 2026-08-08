@@ -1541,6 +1541,7 @@ li {
     background-color: transparent;
     border: none;
     transition: transform .4s;
+    color: #208200;
 }
 
 .faq_element_a.faq_open {
