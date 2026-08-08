@@ -6,6 +6,10 @@
 }
 
 /*共通設定*/
+html {
+    scroll-padding-top: 88px;
+}
+
 .frame_settings {
     margin: 0 auto 160px auto;
     width: 95%;
@@ -22,7 +26,7 @@
     overflow-wrap: break-word;
 }
 
-h1 {
+h2 {
     font-size: 32px;
     line-height: 32px;
     font-weight: bold;
@@ -31,7 +35,7 @@ h1 {
     text-align: center;
 }
 
-h2 {
+h3 {
     font-size: 24px;
     font-weight: bold;
     line-height: 24px;
@@ -39,10 +43,11 @@ h2 {
 
 }
 
-h3 {
+p {
     font-size: 16px;
     line-height: 24px;
     font-weight: normal;
+    border: solid 1px black;
 }
 
 body {
@@ -53,6 +58,11 @@ body {
 a {
     text-decoration: none;
 }
+
+li {
+    list-style: none;
+}
+
 
 /*個別設定*/
 /*ヘッダー*/
@@ -92,14 +102,14 @@ a {
 
 .header_menu_area {
     display: flex;
-    gap: 24px;
+    gap: 16px;
     margin: auto calc(100%*24/1024) auto auto;
     align-items: center;
 }
 
 .header_menus {
     display: flex;
-    gap: 24px;
+    gap: 16px;
 }
 
 .header_menus>* {
@@ -140,7 +150,7 @@ a {
     transform: translateY(-100%);
 }
 
-@media(max-width:1200px) {
+@media(max-width:1024px) {
 
     .header_menu_area .button_free_back,
     .header_menu_area .button_lesson_back {
@@ -256,7 +266,7 @@ a {
     font-size: 28px;
     color: #ffffff;
     font-weight: 900;
-    line-height: 28px;
+    line-height: 1;
     padding: 14px;
 }
 
@@ -276,7 +286,7 @@ a {
     padding: 14px;
 }
 
-@media(max-width:970px) {
+@media(max-width:1024px) {
     .first_view_sub {
         display: none;
     }
@@ -286,14 +296,49 @@ a {
     }
 }
 
-@media(max-width:824px) {
+@media(max-width:768px) {
     .first_view_title {
-        font-size: 80px;
-        line-height: 80px;
+        font-size: clamp(2.4125rem, 14.6056vw - 1.0107rem, 6rem);
+        line-height: 1;
     }
 
     .first_view_img {
-        object-position: right 70%;
+        object-position: 90% 70%;
+    }
+
+    .first_button_area {
+        margin: 16px 0px 0px calc(100vw*88/1440);
+    }
+
+    .button_free_back {
+        border-radius: 16px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+    }
+
+    .button_free_text {
+        font-size: 16px;
+        color: #ffffff;
+        font-weight: 900;
+        line-height: 1;
+        padding: 8px;
+    }
+
+    .button_lesson_back {
+        background-color: #ffffff;
+        border-radius: 16px;
+        border: solid 3.5px #FF4639;
+        height: 32px;
+        display: flex;
+        align-items: center;
+    }
+
+    .button_lesson_text {
+        font-size: 16px;
+        color: #FF4639;
+        font-weight: 900;
+        padding: 8px;
     }
 }
 
@@ -311,6 +356,9 @@ a {
     height: 100%;
     border-radius: 25px;
     padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .programming_svg {
@@ -334,12 +382,15 @@ a {
     aspect-ratio: 144/112;
 }
 
-.programming_h1 {
+.programming_title {
     font-size: 24px;
     line-height: 24px;
     font-weight: bold;
     color: #208200;
     margin-bottom: 16px;
+    border: solid 1px black;
+    padding: 0;
+    width: fit-content
 }
 
 .programming_text {
@@ -425,6 +476,7 @@ a {
 
 
 
+
 /*BeEngineerの強みを見てみよう！*/
 .frame_strength {
     height: fit-content;
@@ -459,7 +511,7 @@ a {
 
 .strength_text_area {
     display: block;
-    width: 504px;
+    width: 480px;
     height: fit-content;
     display: flex;
     gap: 8px;
@@ -467,23 +519,19 @@ a {
     flex-direction: column;
     justify-content: center;
     padding-left: 56px;
+    padding-right: 24px;
 }
 
 
 
 
-.strength_card:hover h2 {
+.strength_card:hover .strength_title {
     color: #ffffff;
     transition: 10ms;
 }
 
-.strength_card h3 {
+.strength_text {
     max-width: 368px;
-}
-
-.strength_card:hover h3 {
-    color: #ffffff;
-    transition: 10ms;
 }
 
 .strength_img_area {
@@ -504,19 +552,31 @@ a {
 @media(max-width:1024px) {
     .strength_card_area {
         margin: 0 auto;
+        border: solid 1px black;
     }
 
     .strength_card {
         flex-direction: column;
+        padding: 36px;
+        border: solid 1px black;
     }
 
     .strength_img_area {
-        width: 424px;
+        width: 100%;
         height: 160px;
+        border: solid 1px black;
+        padding: 8px 0;
     }
 
     .strength_text_area {
-        padding: 8px 0px 8px 54px;
+        padding: 0;
+        width: 424px;
+        border: solid 1px black;
+    }
+
+    .strength_text {
+        width: 100%;
+        max-width: none;
     }
 }
 
@@ -524,11 +584,12 @@ a {
 @media(max-width:768px) {
     .strength_card {
         width: 95%;
+        margin: 0 auto;
     }
 
     .strength_text_area {
-        width: fit-content;
-        padding: 8px 32px;
+        width: 95%;
+        padding: 8px 0px;
     }
 
     .strength_img_area {
@@ -554,6 +615,7 @@ a {
     gap: 32px;
     position: sticky;
     top: 44px;
+
 }
 
 
@@ -669,6 +731,10 @@ a {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: solid 1px red;
 }
 
 .lesson_name_time {
@@ -676,15 +742,12 @@ a {
     height: fit-content;
     display: flex;
     gap: 16px;
-    position: absolute;
-    top: 0;
-    left: 0;
     opacity: 0;
 }
 
-.lesson_name_time_area {
+.lesson_name_time_content_area {
     width: 624px;
-    height: 120px;
+    height: fit-content;
     position: relative;
 }
 
@@ -701,13 +764,15 @@ a {
     flex-direction: column;
 }
 
-.lesson_name h2,
-.lesson_time h2 {
-    margin-bottom: 24px;
+.lesson_sub_title {
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #208200;
 }
 
-.lesson_name h3,
-.lesson_time h3 {
+
+.lesson_name_time_text {
     font-size: 24px;
     font-weight: 500;
     margin: 0 auto;
@@ -715,9 +780,6 @@ a {
 }
 
 .lesson_content {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 624px;
     height: 448px;
     padding: 48px 32px;
@@ -727,9 +789,6 @@ a {
     gap: 0px;
 }
 
-.lesson_content h2 {
-    margin-bottom: 0px;
-}
 
 .lesson_content.active {
     opacity: 1;
@@ -741,11 +800,6 @@ a {
     position: relative;
 }
 
-.lesson_content h3 {
-    margin-top: 24px;
-    max-width: 560px;
-    height: fit-content;
-}
 
 .lesson_svg {
     width: 304px;
@@ -794,7 +848,7 @@ a {
         flex-direction: column;
     }
 
-    .lesson_name_time_area {
+    .lesson_name_time_content_area {
         width: 344px;
         height: 256px;
         position: relative;
@@ -893,35 +947,35 @@ a {
     background-color: #208200;
 }
 
-@media(max-width:1024px){
-    .flow_card{
+@media(max-width:1024px) {
+    .flow_card {
         width: 600px;
         margin: 0 auto;
     }
 }
 
-@media(max-width:768px){
-    .flow_card{
+@media(max-width:768px) {
+    .flow_card {
         width: 344px;
     }
 
-    .flow_element_area{
+    .flow_element_area {
         flex-direction: column;
         align-items: center;
-        
+
     }
 
-    .flow_element{
+    .flow_element {
         flex-direction: row;
         justify-content: center;
         width: 256px;
     }
 
-    .flow_img{
+    .flow_img {
         margin: 0 24px 0 0;
     }
 
-    .arrow_img{
+    .arrow_img {
         transform: rotate(90deg);
     }
 }
@@ -940,7 +994,7 @@ a {
 
 
 
-.cta_text h1 {
+.cta_text {
     padding: 0;
     text-align: initial;
     margin-bottom: 24px;
@@ -953,15 +1007,19 @@ a {
     gap: 64px;
 }
 
-.cta_button_area .button_free_back {
+.cta_button_area .button_free_back,
+.button_lesson_back {
     border-radius: 36px;
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
 }
 
-.cta_button_area .button_free_text {
+.cta_button_area .button_free_text,
+.cta_button_area .button_lesson_text {
     font-size: 36px;
     padding: 18px;
 }
+
+
 
 
 @media(max-width:1024px) {
@@ -983,7 +1041,8 @@ a {
         width: 95%;
     }
 
-    .cta_button_area .button_free_text {
+    .cta_button_area .button_free_text,
+    .cta_button_area .button_lesson_text {
         font-size: 24px;
     }
 }
@@ -1032,16 +1091,14 @@ a {
     z-index: 80;
 }
 
-.voice_card h2 {
+.voice_sub_title {
     margin-bottom: 24px;
-    z-index: 101;
+    z-index: 200;
     position: relative;
-
-
 
 }
 
-.voice_card h3 {
+.voice_text {
     max-width: 216px;
     width: 100%;
     z-index: 100;
@@ -1067,14 +1124,14 @@ a {
     z-index: 3;
 }
 
-.voice_card h3::after {
+.voice_text::after {
     content: "";
     position: absolute;
     width: 304px;
     height: 50px;
     top: 150px;
     left: 0px;
-    z-index: 300;
+    z-index: 23;
     backdrop-filter: blur(4px);
 }
 
@@ -1126,6 +1183,12 @@ a {
 }
 
 /*日時・場所*/
+.access_text {
+    font-size: 16px;
+    color: #000000;
+    font-weight: normal;
+}
+
 .schedule_place_area {
     position: relative;
     perspective: 10000px;
@@ -1329,6 +1392,11 @@ a {
     width: 100%;
 }
 
+.schedule_title {
+    color: #000000;
+    margin-top: 24px;
+}
+
 @media(max-width:1024px) {
     .schoolname_area {
         display: flex;
@@ -1461,8 +1529,7 @@ a {
     color: #f04830;
 }
 
-.faq_element_a h3,
-.faq_element_q h3:not(.faq_button) {
+.faq_text:not(.faq_button) {
     width: fit-content;
 }
 
@@ -1471,6 +1538,9 @@ a {
     font-size: 24px;
     font-weight: bold;
     margin-right: 16px;
+    background-color: transparent;
+    border: none;
+    transition: transform .4s;
 }
 
 .faq_element_a.faq_open {
@@ -1501,19 +1571,15 @@ a {
 }
 
 .enter_form_area {
-    width: fit-content;
+    width: 800px;
     height: fit-content;
     display: flex;
     gap: 80px;
     margin: 0 auto;
+    flex-wrap: wrap;
 }
 
-.enter_forms_1,
-.enter_forms_2 {
-    display: flex;
-    flex-direction: column;
-    gap: 56px;
-}
+
 
 .enter_form {
     max-width: 320px;
@@ -1525,12 +1591,12 @@ a {
     align-items: flex-start;
 }
 
-.enter_form label {
+.enter_form_label {
     font-size: 20px;
     font-weight: bold;
 }
 
-.enter_form input {
+.enter_form_input {
     width: 320px;
     height: 44px;
     border: none;
@@ -1538,15 +1604,34 @@ a {
 
 }
 
-.enter_form span {
+.pull_menu {
+    width: 320px;
+    height: 44px;
+    border: none;
+    border-bottom: solid 3px #d9d9d9;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.enter_form_span {
     color: #f04830;
 }
 
 @media(max-width:1024px) {
     .enter_form_area {
-        gap: 56px;
-        flex-direction: column;
+        gap: 24px;
         align-items: center;
+        flex-wrap: wrap;
+        width: 688px;
+        justify-content: center;
+    }
+
+    .enter_form_input {
+        width: 200px;
+    }
+
+    .pull_menu {
+        width: 200px;
     }
 }
 
@@ -1563,33 +1648,32 @@ a {
 
 
 @media(max-width:768px) {
-    .enter_form input {
+    .enter_form_input {
         width: 100%;
-        border: solid 1px black;
     }
 
     .enter_form_area {
-        width: 95%;
-        border: solid 1px black;
-    }
-
-    .enter_forms_1,
-    .enter_forms_2 {
-        padding-left: 10%;
+        width: 300px;
     }
 
     .enter_form {
-        width: fit-content;
+        width: 300px;
+
+    }
+
+    .application_card {
+        padding: 16px;
     }
 }
 
 /*フッター*/
 footer {
-    height: 224px;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     width: 100%;
     background-color: #d9d9d9;
+    padding: 24px;
 }
 
 .footer_logo {
@@ -1597,21 +1681,17 @@ footer {
 }
 
 
-.footer_element_up {
+.footer_elements {
     display: flex;
-    gap: 120px;
-    margin: 0 auto 36px auto;
+    row-gap: 160px;
+    column-gap: 20px;
+    margin: 0 auto;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    border: solid 1px black;
 }
 
-.footer_element_down {
-    display: flex;
-    gap: 72px;
-    margin: 0 auto 0 auto;
-    justify-content: center;
-    align-items: center;
-}
 
 
 @media(max-width:1024px) {

@@ -78,8 +78,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const lesson_name_time = document.querySelectorAll('.lesson_name_time');
     window.addEventListener('scroll', () => {
         const tiktok_scrollY = scroll_space_2.getBoundingClientRect();
-        if (tiktok_scrollY.top < 0 && tiktok_scrollY.top > -(584 * 2)) {
+        if (tiktok_scrollY.top <= 0 && tiktok_scrollY.top >= -(584 * 2)) {
             track.style.transform = `translateY(${tiktok_scrollY.top}px)`;
+        } else {
         }
 
         lesson_name_time.forEach(lesson_name_time => {
@@ -90,13 +91,13 @@ document.addEventListener('DOMContentLoaded', () => {
             lesson_content.classList.remove('active');
         });
 
-        if (tiktok_scrollY.top > -584) {
+        if (tiktok_scrollY.top > -584+3) {
             lesson_content[0].classList.add('active');
             lesson_name_time[0].classList.add('active');
-        } else if (tiktok_scrollY.top <= -584 && tiktok_scrollY.top > -584 * 2) {
+        } else if (tiktok_scrollY.top <= -584+3 && tiktok_scrollY.top > (-584 * 2)+3) {
             lesson_content[1].classList.add('active');
             lesson_name_time[1].classList.add('active');
-        } else if (tiktok_scrollY.top <= -584 * 2) {
+        } else if (tiktok_scrollY.top <= (-584 * 2)+3) {
             lesson_content[2].classList.add('active');
             lesson_name_time[2].classList.add('active');
         }
@@ -111,16 +112,11 @@ document.addEventListener('DOMContentLoaded', () => {
         scroll_time = setTimeout(() => {
             const tiktok_scrollY = scroll_space_2.getBoundingClientRect();
             const scroll_position = window.scrollY + tiktok_scrollY.top;
-            if (tiktok_scrollY.top > -292) {
-                currentIndex = 0;
-            } else if (tiktok_scrollY.top <= -292 && tiktok_scrollY.top >= -876) {
-                currentIndex = 1;
-            } else if (tiktok_scrollY.top < -876) {
-                currentIndex = 2;
-            };
+            console.log(scroll_position);
+            currentIndex=Math.min(2,Math.max(0,Math.floor((Math.abs(tiktok_scrollY.top)+292)/584)));
             if (tiktok_scrollY.top < 0 && tiktok_scrollY.top > -(584 * 2)) {
                 window.scrollTo({
-                    top: scroll_position + currentIndex * 584,
+                    top: Math.floor(scroll_position + currentIndex * 584),
                     behavior: "smooth"
                 });
             }
@@ -130,20 +126,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 lesson_text_transition.forEach(text => {
                     text.classList.remove('active');
                 });
-
-                lesson_text_transition[currentIndex * 2 + 0].classList.add('active');
-                lesson_text_transition[currentIndex * 2 + 1].classList.add('active');
-                lesson_text_transition[currentIndex + 6].classList.add('active');
-                pastIndex = currentIndex;
             };
-        }, 80);
+
+            lesson_text_transition[currentIndex * 3 + 0].classList.add('active');
+            lesson_text_transition[currentIndex * 3 + 1].classList.add('active');
+            lesson_text_transition[currentIndex * 3 + 2].classList.add('active');
+            pastIndex = currentIndex;
+        }, 100);
     });
 
-    const sp_time=document.querySelector('.sp_time');
-    setInterval(()=>{
-        const now=new Date();
-        const hour=String(now.getHours()).padStart(2,"0");
-        const minutes=String(now.getMinutes()).padStart(2,"0");
-        sp_time.textContent=`${hour}:${minutes}`;
-    },1000);
+    const sp_time = document.querySelector('.sp_time');
+    setInterval(() => {
+        const now = new Date();
+        const hour = String(now.getHours()).padStart(2, "0");
+        const minutes = String(now.getMinutes()).padStart(2, "0");
+        sp_time.textContent = `${hour}:${minutes}`;
+    }, 1000);
 });
