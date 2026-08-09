@@ -29,7 +29,7 @@ html {
 h2 {
     font-size: 32px;
     line-height: 32px;
-    font-weight: bold;
+    font-weight: 700;
     color: #208200;
     padding-bottom: 48px;
     text-align: center;
@@ -37,7 +37,7 @@ h2 {
 
 h3 {
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 700;
     line-height: 24px;
     color: #208200;
 
@@ -53,6 +53,7 @@ p {
 body {
     width: 100%;
     background-color: #F5F5F7;
+    font-family: "Noto Sans JP", sans-serif;
 }
 
 a {
@@ -115,7 +116,7 @@ li {
 .header_menus>* {
     font-size: 16px;
     line-height: 16px;
-    font-weight: bold;
+    font-weight: 700;
     color: #000000;
 }
 
@@ -214,7 +215,7 @@ li {
     margin: 128px 0px 0px calc(100vw*88/1440);
     font-size: 96px;
     line-height: 96px;
-    font-weight: bold;
+    font-weight: 700;
     color: #208200;
 }
 
@@ -232,7 +233,7 @@ li {
     width: 80px;
     color: #208200;
     font-size: 128px;
-    font-weight: bold;
+    font-weight: 700;
     display: block;
     margin: 0px auto;
     transform: rotate(90deg);
@@ -385,7 +386,7 @@ li {
 .programming_title {
     font-size: 24px;
     line-height: 24px;
-    font-weight: bold;
+    font-weight: 700;
     color: #208200;
     margin-bottom: 16px;
     border: solid 1px black;
@@ -440,11 +441,12 @@ li {
     margin: 0 auto;
     flex-wrap: wrap;
     justify-content: center;
+
 }
 
 .attractive_card {
     width: 304px;
-    height: 600px;
+    height: 480px;
     padding: 40px;
     display: flex;
     flex-direction: column;
@@ -464,14 +466,14 @@ li {
     align-items: center;
     justify-content: center;
     margin: auto auto 0 auto;
-    width: 200px;
-    height: 200px;
+    width: 160px;
+    height: 160px;
 }
 
 
 .attractive_svg {
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -480,6 +482,7 @@ li {
 /*BeEngineerの強みを見てみよう！*/
 .frame_strength {
     height: fit-content;
+     overflow-x: hidden;
 }
 
 
@@ -650,7 +653,7 @@ li {
     position: absolute;
     top: 5px;
     left: 40px;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .sp_net {
@@ -762,12 +765,13 @@ li {
     padding: 16px 32px;
     display: flex;
     flex-direction: column;
+    border: solid 1px black;
 }
 
 .lesson_sub_title {
     margin-bottom: 8px;
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 700;
     color: #208200;
 }
 
@@ -829,8 +833,31 @@ li {
     opacity: 1;
 }
 
+.sp_scale {
+    display: none;
+}
+
+.lp_hide {
+    display: none;
+    margin-top: 16px;
+}
+
+.lp_hide .card_settings {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.lp_hide .lesson_time {
+    width: 180px;
+    height: calc(584px*0.3);
+    padding: 0;
+}
 
 @media(max-width:1024px) {
+    .frame_lesson {
+        height: 2600px;
+    }
+
     .lesson_area {
         flex-direction: column;
         align-items: center;
@@ -842,6 +869,11 @@ li {
 }
 
 @media(max-width:768px) {
+    .lesson_tiktok {
+        display: none;
+        zoom: 0.3;
+    }
+
     .lesson_name_time {
         align-items: center;
         width: fit-content;
@@ -877,6 +909,29 @@ li {
         display: none;
     }
 
+    .sp_scale {
+        display: block;
+        border: solid 1px black;
+    }
+
+    .sp_hide {
+        display: none;
+    }
+
+    .lp_hide {
+        display: flex;
+        gap: 8px;
+        width: fit-content;
+        height: fit-content;
+    }
+
+    .lp_hide .lesson_time {
+        border: none;
+    }
+
+    .lesson_tiktok::before {
+        background-color: transparent;
+    }
 }
 
 
@@ -920,7 +975,7 @@ li {
 
 .flow_text {
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .arrow_img {
@@ -1160,7 +1215,7 @@ li {
 .price_title {
     font-size: 32px;
     line-height: 32px;
-    font-weight: bold;
+    font-weight: 700;
     margin-bottom: 24px;
     text-align: center;
 
@@ -1169,7 +1224,7 @@ li {
 .price_yen {
     font-size: 40px;
     line-height: 40px;
-    font-weight: bold;
+    font-weight: 700;
     color: #208200;
     text-align: center;
 
@@ -1308,7 +1363,7 @@ li {
 
 .free_date {
     font-size: 40px;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .free_day,
@@ -1347,7 +1402,7 @@ li {
     font-size: 24px;
     color: #ffffff;
     line-height: 24px;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .place_access_area {
@@ -1520,7 +1575,7 @@ li {
     font-size: 24px;
     line-height: 24px;
     color: #208200;
-    font-weight: bold;
+    font-weight: 700;
     width: 24px;
 }
 
@@ -1536,7 +1591,7 @@ li {
 .faq_button {
     width: 24px;
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 700;
     margin-right: 16px;
     background-color: transparent;
     border: none;
@@ -1594,7 +1649,7 @@ li {
 
 .enter_form_label {
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .enter_form_input {
@@ -1610,7 +1665,7 @@ li {
     height: 44px;
     border: none;
     border-bottom: solid 3px #d9d9d9;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 16px;
 }
 
@@ -1640,7 +1695,7 @@ li {
     width: fit-content;
     color: #ffffff;
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 700;
     background-color: #f04830;
     padding: 8px 16px;
     border-radius: 20px;
@@ -1720,7 +1775,7 @@ footer {
 
 .svg_text {
     font-weight: 900;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow 700', sans-serif;
     font-size: clamp(4.5rem, 22vw, 16rem);
     transform-origin: center center;
 }
@@ -1757,4 +1812,44 @@ footer {
     inset: 0;
     opacity: 1;
     pointer-events: auto;
+}
+
+
+
+/*スクロールしたらしたからふわっと*/
+.before_animation {
+    transform: translateY(60px);
+    opacity: 0;
+}
+
+.after_animation {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: opacity 1s, transform 1s;
+}
+
+
+/*左からスクロール*/
+.before_animation_left {
+    transform: translateX(-400px);
+    opacity: 0;
+}
+
+.after_animation_right {
+    transform: translateX(0px);
+    opacity: 1;
+    transition: opacity 3s, transform 3s;
+}
+
+/*右からスクロール*/
+
+.before_animation_right {
+    transform: translateX(400px);
+    opacity: 0;
+}
+
+.after_animation_left {
+    transform: translateX(0px);
+    opacity: 1;
+    transition: opacity 2s, transform 2s;
 }

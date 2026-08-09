@@ -91,13 +91,13 @@ document.addEventListener('DOMContentLoaded', () => {
             lesson_content.classList.remove('active');
         });
 
-        if (tiktok_scrollY.top > -584+3) {
+        if (tiktok_scrollY.top > -584 + 3) {
             lesson_content[0].classList.add('active');
             lesson_name_time[0].classList.add('active');
-        } else if (tiktok_scrollY.top <= -584+3 && tiktok_scrollY.top > (-584 * 2)+3) {
+        } else if (tiktok_scrollY.top <= -584 + 3 && tiktok_scrollY.top > (-584 * 2) + 3) {
             lesson_content[1].classList.add('active');
             lesson_name_time[1].classList.add('active');
-        } else if (tiktok_scrollY.top <= (-584 * 2)+3) {
+        } else if (tiktok_scrollY.top <= (-584 * 2) + 3) {
             lesson_content[2].classList.add('active');
             lesson_name_time[2].classList.add('active');
         }
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const tiktok_scrollY = scroll_space_2.getBoundingClientRect();
             const scroll_position = window.scrollY + tiktok_scrollY.top;
             console.log(scroll_position);
-            currentIndex=Math.min(2,Math.max(0,Math.floor((Math.abs(tiktok_scrollY.top)+292)/584)));
+            currentIndex = Math.min(2, Math.max(0, Math.floor((Math.abs(tiktok_scrollY.top) + 292) / 584)));
             if (tiktok_scrollY.top < 0 && tiktok_scrollY.top > -(584 * 2)) {
                 window.scrollTo({
                     top: Math.floor(scroll_position + currentIndex * 584),
@@ -128,9 +128,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             };
 
-            lesson_text_transition[currentIndex * 3 + 0].classList.add('active');
-            lesson_text_transition[currentIndex * 3 + 1].classList.add('active');
-            lesson_text_transition[currentIndex * 3 + 2].classList.add('active');
+            lesson_text_transition[currentIndex * 4 + 0].classList.add('active');
+            lesson_text_transition[currentIndex * 4 + 1].classList.add('active');
+            lesson_text_transition[currentIndex * 4 + 2].classList.add('active');
             pastIndex = currentIndex;
         }, 100);
     });
@@ -142,4 +142,53 @@ document.addEventListener('DOMContentLoaded', () => {
         const minutes = String(now.getMinutes()).padStart(2, "0");
         sp_time.textContent = `${hour}:${minutes}`;
     }, 1000);
+
+
+    /*下からふわっと浮かび上がってくる */
+    const before_animations = document.querySelectorAll('.before_animation');
+    const observer_1 = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.remove('before_animation');
+                entry.target.classList.add('after_animation');
+                observer_1.unobserve(entry.target);
+            }
+        });
+    });
+
+    before_animations.forEach(before_animation => {
+        observer_1.observe(before_animation);
+    })
+
+
+    const before_animations_lefts = document.querySelectorAll('.before_animation_left')
+    const observer_2 = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.remove('before_animation_left');
+                entry.target.classList.add('after_animation_right');
+                observer_2.unobserve(entry.target);
+            }
+        });
+    });
+
+    before_animations_lefts.forEach(before_animations_left => {
+        observer_2.observe(before_animations_left);
+    })
+
+    const before_animations_rights = document.querySelectorAll('.before_animation_right')
+    const observer_3 = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.remove('before_animation_right');
+                entry.target.classList.add('after_animation_left');
+                observer_3.unobserve(entry.target);
+            }
+        });
+    });
+
+    before_animations_rights.forEach(before_animations_right => {
+        observer_3.observe(before_animations_right);
+    })
+
 });
