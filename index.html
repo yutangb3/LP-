@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <header class="frame_header">
+    <header class="frame_header scroll_hide">
         <div class="header_icon">
             <svg width="160" height="64" viewBox="0 0 159 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -92,6 +92,53 @@
             </div>
         </section>
         <!--ここにフェイク-->
+        <section class="fake_first_view">
+            <div class="scroll_lead">
+                <span class="scroll_line"></span>
+                <span class="scroll_ball"></span>
+                <span class="scroll_text">scroll down</span>
+            </div>
+            <svg viewBox="0 0 1600 900" class="mask_svg">
+                <mask id="text_mask">
+                    <rect width="100%" height="100%" fill="white"></rect>
+                    <g class="svg_text" fill="black">
+                        <path
+                            d="M62.417 58.4037C62.1964 59.9676 61.3748 61.382 60.1288 62.3428C58.903 63.4108 57.336 63.9991 55.7145 64H49.7214C46.199 64 44.4513 62.1346 44.4785 58.4037H47.4822C47.3803 60.2579 48.2446 61.188 50.0873 61.188H53.0839C53.8972 61.1866 54.6838 60.896 55.3048 60.3676C55.9269 59.8885 56.3384 59.1838 56.4514 58.4037H62.417Z"
+                            fill="black" />
+                        <path
+                            d="M59.4612 35.9929H65.3493L62.7686 55.5917H56.8153L57.1863 52.7808C57.0723 53.5878 56.6633 54.3231 56.0392 54.8429C55.4152 55.3627 54.6209 55.6297 53.8116 55.5917H50.8151C50.0707 55.6176 49.3294 55.4837 48.6405 55.1988C47.9516 54.9139 47.3309 54.4847 46.8197 53.9396C46.3227 53.4242 45.9516 52.7995 45.7358 52.115C45.52 51.4305 45.4654 50.7048 45.5762 49.9954L46.676 41.5861C46.8965 40.0129 47.7172 38.588 48.9642 37.6132C50.1973 36.5567 51.767 35.9816 53.3866 35.9929H57.3687L56.9162 38.8039H56.0183C55.2012 38.8026 54.4109 39.0966 53.7912 39.6325C53.1722 40.1109 52.7609 40.8117 52.6436 41.5882L51.5499 49.9975C51.4944 50.3496 51.5216 50.7099 51.6294 51.0495C51.7372 51.3891 51.9225 51.6986 52.1707 51.9532C52.4295 52.2292 52.7443 52.446 53.0937 52.589C53.4431 52.7319 53.819 52.7977 54.1959 52.7818C55.0159 52.7879 55.8101 52.4933 56.43 51.9532C57.0443 51.4727 57.4504 50.772 57.5634 49.9975L59.0148 38.7793L59.4612 35.9929Z"
+                            fill="black" />
+                        <path d="M59.7314 33.1809L60.0688 30.3699H66.0414L65.6704 33.1809H59.7314Z" fill="#28C04A" />
+                        <path
+                            d="M69.7617 55.5928L72.3332 35.996H78.2927L77.9278 38.807C78.0942 37.9832 78.5203 37.2355 79.1427 36.6749C79.759 36.1957 80.5257 35.9548 81.3035 35.996H84.3C85.0454 35.9702 85.7876 36.1053 86.4768 36.3922C87.166 36.6791 87.7861 37.1112 88.2954 37.6594C88.7925 38.1779 89.1633 38.8053 89.3787 39.4924C89.5941 40.1794 89.6482 40.9073 89.5368 41.619L87.7022 55.6215H81.7356L83.5621 41.6169C83.6191 41.2599 83.592 40.8945 83.483 40.55C83.3739 40.2055 83.186 39.8916 82.9342 39.6335C82.6747 39.3584 82.3598 39.1422 82.0105 38.9993C81.6613 38.8564 81.2858 38.7901 80.909 38.8049C80.0936 38.8021 79.3046 39.0964 78.6881 39.6335C78.0665 40.1205 77.6578 40.8319 77.5486 41.6169L75.714 55.6194L69.7617 55.5928Z"
+                            fill="black" />
+                        <path
+                            d="M112.713 47.1845H100.741L99.8913 52.7121C99.8358 53.0642 99.863 53.4245 99.9708 53.7641C100.079 54.1037 100.264 54.4132 100.512 54.6677C100.77 54.9445 101.085 55.1619 101.435 55.3049C101.784 55.4479 102.16 55.5132 102.537 55.4964H129.453C131.437 55.4964 132.562 54.5683 132.828 52.7121H135.824C134.873 56.4381 132.639 58.3032 129.122 58.3073H99.1208C98.3766 58.3335 97.6353 58.1999 96.9464 57.9154C96.2575 57.6309 95.6368 57.202 95.1254 56.6573C94.6276 56.1423 94.2561 55.5174 94.0406 54.8325C93.8251 54.1476 93.7714 53.4215 93.884 52.7121L95.5036 41.5882C95.7241 40.015 96.5448 38.5901 97.7917 37.6153C99.0244 36.5593 100.593 35.9842 102.212 35.995H108.205C108.951 35.9683 109.693 36.103 110.382 36.39C111.072 36.677 111.692 37.1095 112.201 37.6584C112.701 38.1749 113.073 38.8021 113.289 39.4898C113.504 40.1774 113.557 40.9062 113.442 41.6179L112.713 47.1845ZM101.111 44.3735H107.112L107.476 41.5892C107.531 41.2318 107.502 40.8665 107.392 40.5222C107.282 40.178 107.094 39.8642 106.842 39.6059C106.583 39.3301 106.269 39.1135 105.919 38.9706C105.57 38.8276 105.194 38.7617 104.817 38.7772C104 38.7759 103.21 39.07 102.59 39.6059C101.968 40.0922 101.559 40.8038 101.45 41.5892L101.111 44.3735Z"
+                            fill="black" />
+                        <path
+                            d="M136.621 47.1845H124.654L123.776 52.6987C123.721 53.0519 123.748 53.4132 123.856 53.7539C123.964 54.0946 124.149 54.4054 124.397 54.6616C124.656 54.9372 124.971 55.1533 125.32 55.2949C125.67 55.4365 126.046 55.5003 126.422 55.482H129.419C129.824 55.5349 130.236 55.5037 130.629 55.3904C131.022 55.2772 131.388 55.0842 131.704 54.8234C132.02 54.5626 132.28 54.2395 132.467 53.8739C132.654 53.5083 132.765 53.1081 132.793 52.6977H135.79C134.839 56.4327 132.604 58.2977 129.087 58.293H123.041C122.298 58.319 121.558 58.1862 120.869 57.9034C120.18 57.6206 119.559 57.1941 119.046 56.6521C118.547 56.1364 118.175 55.5103 117.959 54.8241C117.744 54.1378 117.691 53.4103 117.804 52.6997L119.418 41.5892C119.637 40.0171 120.455 38.5923 121.699 37.6163C122.931 36.5601 124.5 35.9847 126.118 35.995H132.119C132.864 35.9692 133.606 36.1043 134.295 36.3912C134.985 36.6781 135.605 37.1102 136.114 37.6584C136.611 38.1769 136.982 38.8043 137.197 39.4913C137.413 40.1783 137.467 40.9063 137.355 41.6179L136.621 47.1845ZM125.019 44.3735H131.019L131.384 41.5892C131.441 41.2322 131.414 40.8668 131.305 40.5223C131.196 40.1778 131.008 39.8639 130.756 39.6058C130.496 39.3307 130.181 39.1145 129.832 38.9716C129.483 38.8287 129.107 38.7624 128.731 38.7772C127.915 38.7743 127.126 39.0687 126.51 39.6058C125.885 40.0913 125.473 40.8029 125.362 41.5892L125.019 44.3735Z"
+                            fill="black" />
+                        <path
+                            d="M147.466 55.5948H141.494L144.058 35.9693H150.031L149.295 41.5923C149.624 39.9575 150.466 38.4722 151.697 37.3548C152.935 36.3975 154.471 35.916 156.03 35.997H159L158.264 41.6199H152.291C151.477 41.6148 150.688 41.9062 150.07 42.4404C149.449 42.9189 149.04 43.6238 148.93 44.4032L147.466 55.5948Z"
+                            fill="black" />
+                        <path
+                            d="M0 55.5917L3.37467 30.3699H18.3176L17.9385 33.1809H8.96923L7.84196 41.5902H13.8422L13.4977 44.3745H7.47198L6.34471 52.7838H15.3139L14.9429 55.5948L0 55.5917Z"
+                            fill="black" />
+                        <path
+                            d="M20.9228 55.5917L23.5728 35.9949H29.5353L29.1643 38.8059C29.3259 37.9821 29.7499 37.2336 30.3721 36.6738C30.9886 36.1959 31.7545 35.9551 32.5318 35.9949H35.5284C36.2728 35.9692 37.0142 36.1043 37.7023 36.3912C38.3905 36.6782 39.0095 37.1103 39.5176 37.6583C40.0152 38.1761 40.3855 38.8039 40.5988 39.4915C40.812 40.179 40.8624 40.9073 40.7458 41.6179L38.8755 55.5917H32.91L34.7843 41.5882C34.8413 41.2312 34.8142 40.8657 34.7052 40.5212C34.5961 40.1767 34.4082 39.8628 34.1565 39.6048C33.8976 39.3297 33.5832 39.1135 33.2344 38.9707C32.8857 38.828 32.5106 38.762 32.1343 38.7772C31.3173 38.7759 30.5269 39.07 29.9073 39.6058C29.2826 40.0913 28.8709 40.8029 28.7597 41.5892L26.9098 55.5917H20.9228Z"
+                            fill="black" />
+                        <path
+                            d="M0 25.3592L3.24625 0.00310833H15.213C15.9584 -0.0226958 16.7007 0.112405 17.3898 0.399324C18.079 0.686243 18.6991 1.11833 19.2084 1.66651C19.7085 2.18336 20.0823 2.81014 20.3002 3.49734C20.5181 4.18453 20.5742 4.9133 20.4641 5.62606L20.2827 7.05052C20.1467 8.55666 19.4326 9.95017 18.2921 10.9352C16.9265 11.9793 15.2807 12.5867 13.568 12.6786C15.5524 12.6786 16.9763 13.2426 17.8263 14.3758C18.2551 14.9313 18.5666 15.569 18.7419 16.2498C18.9171 16.9307 18.9524 17.6404 18.8456 18.3354L18.6631 19.7619C18.4411 21.3292 17.6234 22.7487 16.3821 23.7215C15.1601 24.7975 13.5917 25.3911 11.9678 25.392L0 25.3592ZM6.33044 22.5339H9.33411C10.1436 22.5427 10.9293 22.2585 11.5479 21.733C12.1705 21.253 12.5803 20.5456 12.6884 19.764L13.0462 16.9386C13.2894 15.0551 12.4118 14.1133 10.4135 14.1133H7.42407L6.33044 22.5339ZM7.76858 11.2839H10.8038C11.6186 11.2813 12.4049 10.9823 13.0176 10.4419C13.6417 9.95594 14.0533 9.2446 14.1653 8.45857L14.523 5.62709C14.5785 5.27185 14.55 4.90846 14.4399 4.56637C14.3297 4.22428 14.141 3.91311 13.8891 3.65808C13.6276 3.38552 13.3123 3.17099 12.9635 3.02829C12.6148 2.88559 12.2402 2.81786 11.8638 2.82946H8.85507L7.76858 11.2839Z"
+                            fill="black" />
+                        <path
+                            d="M42.9321 16.9038H30.9581L30.6004 19.7291C30.5443 20.0833 30.5712 20.4458 30.679 20.7876C30.7867 21.1295 30.9724 21.4413 31.2211 21.6982C31.479 21.9759 31.7935 22.1943 32.143 22.3385C32.4925 22.4828 32.8689 22.5494 33.2463 22.534H36.2429C36.6477 22.587 37.0591 22.5551 37.4511 22.4402C37.8431 22.3253 38.2072 22.1299 38.5205 21.8664C38.8337 21.6029 39.0893 21.2769 39.2711 20.9091C39.4529 20.5412 39.5569 20.1395 39.5768 19.7291H42.5733C41.6281 23.4826 39.3987 25.3593 35.8851 25.3593H29.8788C29.1338 25.3863 28.3917 25.2523 27.7025 24.9664C27.0133 24.6806 26.393 24.2494 25.8834 23.702C25.3822 23.1832 25.0079 22.5541 24.7899 21.8646C24.572 21.1751 24.5165 20.444 24.6277 19.7291L25.7081 11.2809C25.9215 9.70101 26.7401 8.26761 27.9891 7.28645C29.2122 6.21782 30.7764 5.62742 32.3963 5.62304H38.4036C39.1499 5.59845 39.8928 5.73491 40.5823 6.02324C41.2718 6.31157 41.8919 6.74509 42.4011 7.29465C42.902 7.81627 43.2755 8.44791 43.4922 9.13971C43.7089 9.83151 43.7628 10.5645 43.6496 11.2809L42.9321 16.9038ZM31.323 14.0785H37.3232L37.681 11.2809C37.7354 10.9214 37.7065 10.5541 37.5966 10.2078C37.4866 9.8614 37.2985 9.5453 37.047 9.28417C36.7855 9.0116 36.4703 8.79708 36.1215 8.65438C35.7727 8.51168 35.3982 8.44395 35.0218 8.45555C34.2048 8.45424 33.4144 8.74831 32.7948 9.28417C32.1758 9.77825 31.7698 10.4934 31.6614 11.2809L31.323 14.0785Z"
+                            fill="black" />
+                    </g>
+                </mask>
+                <rect class="sum_mask" width="100%" height="100%"></rect>
+            </svg>
+        </section>
+
         <!--ここにフェイク-->
     </div>
     <div class="arrow">
@@ -226,7 +273,7 @@
                     </div>
                 </figure>
                 <ul class="lesson_name_time_content_area">
-                    <li>
+                    <li class="margin_left">
                         <article class="lesson_name_time_content">
                             <div class="lesson_name_time">
                                 <dl class="lesson_name card_settings">
@@ -255,8 +302,6 @@
                                     <figure class="lesson_tiktok card_settings sp_scale">
                                         <div class="track">
                                             <img class="tiktok_img" src="./img/vibe.png">
-                                            <img class="tiktok_img" src="./img/web.png">
-                                            <img class="tiktok_img" src="./img/python.png">
                                         </div>
                                     </figure>
                                 </div>
@@ -278,11 +323,10 @@
                             <div class="lesson_content card_settings">
                                 <dl>
                                     <dt class="lesson_sub_title">講座内容</dt>
-                                    <dd class="overflow_wrap lesson_text_transition">無料体験講座の二つ目はWeb開発体験講座。
-                                        皆が普段見ているサイトに
+                                    <dd class="overflow_wrap lesson_text_transition">Web開発体験講座とは皆が普段見ているサイトに
                                         触れていきます。ここでは三つの言語を使います。
-                                        なのでこの講座では三つのうち実際に
-                                        HTMLとCSSの二つに触ってあなただけのオリジナル
+                                        ですがこの講座では三つのうち実際に
+                                        HTMLとCSSの二つに触れてオリジナル
                                         自己紹介ページもつくっていきます。
                                     </dd>
                                 </dl>
@@ -293,16 +337,14 @@
                                     </dl>
                                     <figure class="lesson_tiktok card_settings sp_scale">
                                         <div class="track">
-                                            <img class="tiktok_img" src="./img/vibe.png">
                                             <img class="tiktok_img" src="./img/web.png">
-                                            <img class="tiktok_img" src="./img/python.png">
                                         </div>
                                     </figure>
                                 </div>
                             </div>
                         </article>
                     </li>
-                    <li>
+                    <li class="margin_right">
                         <article class="lesson_name_time_content">
                             <div class="lesson_name_time">
                                 <dl class="lesson_name card_settings">
@@ -331,8 +373,6 @@
                                     </dl>
                                     <figure class="lesson_tiktok card_settings sp_scale">
                                         <div class="track">
-                                            <img class="tiktok_img" src="./img/vibe.png">
-                                            <img class="tiktok_img" src="./img/web.png">
                                             <img class="tiktok_img" src="./img/python.png">
                                         </div>
                                     </figure>
@@ -355,7 +395,7 @@
     </section>
     <section class="flow_frame frame_settings">
         <h2>流れを見てみよう！</h2>
-        <div class="flow_card card_settings">
+        <div class="flow_card card_settings before_animation">
             <ol class="flow_element_area">
                 <li class="flow_element">
                     <figure class="flow_img">
@@ -429,10 +469,10 @@
                 <h2 class="cta_text">さあBeEnに行こう!</h2>
             </div>
             <ul class="cta_button_area">
-                <li class="button_free_back">
+                <li class="button_free_back animation_scale">
                     <a class="button_free_text" href="#application">体験会に参加する→</a>
                 </li>
-                <li class="button_lesson_back">
+                <li class="button_lesson_back animation_scale">
                     <a class="button_lesson_text" href="#application">講座に参加する→</a>
                 </li>
             </ul>
@@ -442,32 +482,32 @@
         <h2>利用者や講師の声を聞いてみよう!</h2>
         <ul class="voice_card_area">
             <li>
-                <article class="voice_card card_settings gradation">
+                <article class="voice_card card_settings gradation before_animation">
                     <h3 class="voice_sub_title">生徒<br>田中清磨君(16)</h3>
                     <p class="overflow_wrap voice_text">白熱した集団授業の中でプログラミングに対して熱中してます
                         。自分だけのものが作れてサイコーです。</p>
                     <figure class="voice_img_area">
-                        <img class="voice_img" src="img/kid.png">
+                        <img class="voice_img cut_img" src="img/kid.png">
                     </figure>
                 </article>
             </li>
             <li>
-                <article class="voice_card card_settings gradation">
+                <article class="voice_card card_settings gradation before_animation">
                     <h3 class="voice_sub_title">講師<br>岩瀬裕太(19)</h3>
                     <p class="overflow_wrap voice_text"> プログラミングならではの面白さはもちろん魅力
                         について全力で熱心にサポートしていきます！BeEnで待っています！</p>
                     <figure class="voice_img_area">
-                        <img class="voice_img" src="img/teacher.png">
+                        <img class="voice_img cut_img" src="img/teacher.png">
                     </figure>
                 </article>
             </li>
             <li>
-                <article class="voice_card card_settings gradation">
+                <article class="voice_card card_settings gradation before_animation">
                     <h3 class="voice_sub_title">保護者<br>田中一豊</h3>
                     <p class="overflow_wrap voice_text">息子は興味がないものには全く興味なく、
                         何をしても続かないような子でしたが、講師陣のサポートにより続いています。</p>
                     <figure class="voice_img_area">
-                        <img class="voice_img" src="img/parent.png">
+                        <img class="voice_img cut_img" src="img/parent.png">
                     </figure>
                 </article>
             </li>
@@ -477,13 +517,13 @@
         <h2>料金体系</h2>
         <ul class="price_card_area">
             <li>
-                <dl class="price_card card_settings">
+                <dl class="price_card card_settings before_animation">
                     <dt class="price_title">通常講座</dt>
                     <dd class="price_yen">￥25,800/月</dd>
                 </dl>
             </li>
             <li>
-                <dl class="price_card card_settings">
+                <dl class="price_card card_settings before_animation">
                     <dt class="price_title">pythonマスター</dt>
                     <dd class="price_yen">￥20,000</dd>
                 </dl>
@@ -512,17 +552,17 @@
                                     <div class="free_day red_sunday">日</div>
                                     <div class="free_time">12:00~13:00</div>
                                 </div>
-                                <div class="free_schedule">
+                                <div class="free_schedule sp_hide_2">
                                     <div class="free_date"></div>
                                     <div class="free_day blue_saturday"></div>
                                     <div class="free_time"></div>
                                 </div>
-                                <div class="free_schedule">
+                                <div class="free_schedule sp_hide_2">
                                     <div class="free_date"></div>
                                     <div class="free_day blue_saturday"></div>
                                     <div class="free_time"></div>
                                 </div>
-                                <div class="free_schedule">
+                                <div class="free_schedule sp_hide_2">
                                     <div class="free_date"></div>
                                     <div class="free_day"></div>
                                     <div class="free_time"></div>
@@ -544,7 +584,7 @@
                                         <div class="free_time">14:00~18:30</div>
                                     </div>
                                 </div>
-                                <div class="python_schedule">
+                                <div class="python_schedule sp_hide_2">
                                     <div class="python_schedule_1">
                                         <div class="free_date"></div>
                                         <div class="free_day blue_saturday"></div>
@@ -556,7 +596,7 @@
                                         <div class="free_time"></div>
                                     </div>
                                 </div>
-                                <div class="python_schedule">
+                                <div class="python_schedule sp_hide_2">
                                     <div class="python_schedule_1">
                                         <div class="free_date"></div>
                                         <div class="free_day blue_saturday"></div>
@@ -568,7 +608,7 @@
                                         <div class="free_time"></div>
                                     </div>
                                 </div>
-                                <div class="python_schedule">
+                                <div class="python_schedule sp_hide_2">
                                     <div class="python_schedule_1">
                                         <div class="free_date"></div>
                                         <div class="free_day blue_saturday"></div>
@@ -641,17 +681,17 @@
                                     <div class="free_day red_sunday">日</div>
                                     <div class="free_time">11:00~12:00</div>
                                 </div>
-                                <div class="free_schedule">
+                                <div class="free_schedule sp_hide_2">
                                     <div class="free_date"></div>
                                     <div class="free_day"></div>
                                     <div class="free_time"></div>
                                 </div>
-                                <div class="free_schedule">
+                                <div class="free_schedule sp_hide_2">
                                     <div class="free_date"></div>
                                     <div class="free_day"></div>
                                     <div class="free_time"></div>
                                 </div>
-                                <div class="free_schedule">
+                                <div class="free_schedule sp_hide_2">
                                     <div class="free_date"></div>
                                     <div class="free_day"></div>
                                     <div class="free_time"></div>
@@ -673,7 +713,7 @@
                                         <div class="free_time">14:00~18:30</div>
                                     </div>
                                 </div>
-                                <div class="python_schedule">
+                                <div class="python_schedule sp_hide_2">
                                     <div class="python_schedule_1">
                                         <div class="free_date"></div>
                                         <div class="free_day blue_saturday"></div>
@@ -685,7 +725,7 @@
                                         <div class="free_time"></div>
                                     </div>
                                 </div>
-                                <div class="python_schedule">
+                                <div class="python_schedule sp_hide_2">
                                     <div class="python_schedule_1">
                                         <div class="free_date"></div>
                                         <div class="free_day blue_saturday"></div>
@@ -697,7 +737,7 @@
                                         <div class="free_time"></div>
                                     </div>
                                 </div>
-                                <div class="python_schedule">
+                                <div class="python_schedule sp_hide_2">
                                     <div class="python_schedule_1">
                                         <div class="free_date"></div>
                                         <div class="free_day blue_saturday"></div>
@@ -781,7 +821,7 @@
                                     <div class="free_day blue_saturday">土</div>
                                     <div class="free_time">12:00~13:00</div>
                                 </div>
-                                <div class="free_schedule">
+                                <div class="free_schedule sp_hide_2">
                                     <div class="free_date"></div>
                                     <div class="free_day"></div>
                                     <div class="free_time"></div>
@@ -900,17 +940,17 @@
                                     <div class="free_day red_sunday">日</div>
                                     <div class="free_time">12:00~13:00</div>
                                 </div>
-                                <div class="free_schedule">
+                                <div class="free_schedule sp_hide_2">
                                     <div class="free_date"></div>
                                     <div class="free_day"></div>
                                     <div class="free_time"></div>
                                 </div>
-                                <div class="free_schedule">
+                                <div class="free_schedule sp_hide_2">
                                     <div class="free_date"></div>
                                     <div class="free_day"></div>
                                     <div class="free_time"></div>
                                 </div>
-                                <div class="free_schedule">
+                                <div class="free_schedule sp_hide_2">
                                     <div class="free_date"></div>
                                     <div class="free_day"></div>
                                     <div class="free_time"></div>
@@ -944,7 +984,7 @@
                                         <div class="free_time">14:00~18:30</div>
                                     </div>
                                 </div>
-                                <div class="python_schedule">
+                                <div class="python_schedule sp_hide_2">
                                     <div class="python_schedule_1">
                                         <div class="free_date"></div>
                                         <div class="free_day blue_saturday"></div>
@@ -956,7 +996,7 @@
                                         <div class="free_time"></div>
                                     </div>
                                 </div>
-                                <div class="python_schedule">
+                                <div class="python_schedule sp_hide_2">
                                     <div class="python_schedule_1">
                                         <div class="free_date"></div>
                                         <div class="free_day blue_saturday"></div>
@@ -1030,17 +1070,17 @@
                                     <div class="free_day blue_saturday">土</div>
                                     <div class="free_time">11:00~12:00</div>
                                 </div>
-                                <div class="free_schedule">
+                                <div class="free_schedule sp_hide_2">
                                     <div class="free_date"></div>
                                     <div class="free_day blue_saturday"></div>
                                     <div class="free_time"></div>
                                 </div>
-                                <div class="free_schedule">
+                                <div class="free_schedule sp_hide_2">
                                     <div class="free_date"></div>
                                     <div class="free_day blue_saturday"></div>
                                     <div class="free_time"></div>
                                 </div>
-                                <div class="free_schedule">
+                                <div class="free_schedule sp_hide_2">
                                     <div class="free_date"></div>
                                     <div class="free_day"></div>
                                     <div class="free_time"></div>
@@ -1074,7 +1114,7 @@
                                         <div class="free_time">14:00~18:30</div>
                                     </div>
                                 </div>
-                                <div class="python_schedule">
+                                <div class="python_schedule sp_hide_2">
                                     <div class="python_schedule_1">
                                         <div class="free_date"></div>
                                         <div class="free_day blue_saturday"></div>
@@ -1086,7 +1126,7 @@
                                         <div class="free_time"></div>
                                     </div>
                                 </div>
-                                <div class="python_schedule">
+                                <div class="python_schedule sp_hide_2">
                                     <div class="python_schedule_1">
                                         <div class="free_date"></div>
                                         <div class="free_day blue_saturday"></div>
@@ -1148,10 +1188,10 @@
                 <h2 class="cta_text">さあBeEnに行こう!</h2>
             </div>
             <ul class="cta_button_area">
-                <li class="button_free_back">
+                <li class="button_free_back animation_scale">
                     <a class="button_free_text" href="#application">体験会に参加する→</a>
                 </li>
-                <li class="button_lesson_back">
+                <li class="button_lesson_back animation_scale">
                     <a class="button_lesson_text" href="#application">講座に参加する→</a>
                 </li>
             </ul>
@@ -1171,7 +1211,7 @@
                     </div>
                 </dt>
                 <dd class="faq_element_a" id="faq_1">
-                    <span class="faq_title">A.</span>
+                    <span class="faq_title_a">A.</span>
                     <p class="faq_text">その他の費用など一切掛かりません。</p>
                 </dd>
             </dl>
@@ -1186,7 +1226,7 @@
                     </div>
                 </dt>
                 <dd class="faq_element_a" id="faq_2">
-                    <span class="faq_title">A.</span>
+                    <span class="faq_title_a">A.</span>
                     <p class="faq_text">対面のみです。ご容赦ください。</p>
                 </dd>
             </dl>
@@ -1201,7 +1241,7 @@
                     </div>
                 </dt>
                 <dd class="faq_element_a" id="faq_3">
-                    <span class="faq_title">A.</span>
+                    <span class="faq_title_a">A.</span>
                     <p class="faq_text">無料貸し出しを行っております。安心してご参加ください。</p>
                 </dd>
             </dl>
@@ -1216,7 +1256,7 @@
                     </div>
                 </dt>
                 <dd class="faq_element_a" id="faq_4">
-                    <span class="faq_title">A.</span>
+                    <span class="faq_title_a">A.</span>
                     <p class="faq_text">可能です。<br>
                         キャンセルをご希望の場合、<br>
                         無料体験または各講座の参加予定日の3日前までに<br>
@@ -1237,7 +1277,7 @@
                     </div>
                 </dt>
                 <dd class="faq_element_a" id="faq_5">
-                    <span class="faq_title">A.</span>
+                    <span class="faq_title_a">A.</span>
                     <p class="faq_text">
                         中学1年生〜高校3年生までのお子様を対象とした無料体験、講座となります。<br>
                         それ以外のお子様は参加ができません。<br>

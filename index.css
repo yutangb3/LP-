@@ -47,7 +47,6 @@ p {
     font-size: 16px;
     line-height: 24px;
     font-weight: normal;
-    border: solid 1px black;
 }
 
 body {
@@ -88,6 +87,7 @@ li {
     display: flex;
     border-bottom: solid 1px black;
     transition: transform 0.5s;
+    opacity: 0;
     /*フェイクで透明度０*/
 }
 
@@ -145,6 +145,7 @@ li {
 
 .hamburger_menu {
     display: none;
+
 }
 
 .frame_header.scroll_hide {
@@ -243,7 +244,7 @@ li {
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 1;
+    opacity: 0;
     /*フェイクで透明度０*/
 }
 
@@ -389,7 +390,6 @@ li {
     font-weight: 700;
     color: #208200;
     margin-bottom: 16px;
-    border: solid 1px black;
     padding: 0;
     width: fit-content
 }
@@ -482,7 +482,7 @@ li {
 /*BeEngineerの強みを見てみよう！*/
 .frame_strength {
     height: fit-content;
-     overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 
@@ -555,26 +555,22 @@ li {
 @media(max-width:1024px) {
     .strength_card_area {
         margin: 0 auto;
-        border: solid 1px black;
     }
 
     .strength_card {
         flex-direction: column;
         padding: 36px;
-        border: solid 1px black;
     }
 
     .strength_img_area {
         width: 100%;
         height: 160px;
-        border: solid 1px black;
         padding: 8px 0;
     }
 
     .strength_text_area {
         padding: 0;
         width: 424px;
-        border: solid 1px black;
     }
 
     .strength_text {
@@ -606,7 +602,7 @@ li {
     width: fit-content;
 }
 
-.frame_lesson .scroll_space_2 {
+.scroll_space_2 {
     height: 2000px;
 }
 
@@ -626,10 +622,10 @@ li {
     width: 344px;
     height: 584px;
     flex-shrink: 0;
-    border: solid 10px black;
     border-radius: 60px;
     overflow: hidden;
     position: relative;
+    border: solid 6px #000000;
 }
 
 .lesson_tiktok::before {
@@ -737,7 +733,6 @@ li {
     position: absolute;
     top: 0;
     left: 0;
-    border: solid 1px red;
 }
 
 .lesson_name_time {
@@ -765,7 +760,6 @@ li {
     padding: 16px 32px;
     display: flex;
     flex-direction: column;
-    border: solid 1px black;
 }
 
 .lesson_sub_title {
@@ -869,6 +863,10 @@ li {
 }
 
 @media(max-width:768px) {
+    .frame_lesson {
+        height: fit-content;
+    }
+
     .lesson_tiktok {
         display: none;
         zoom: 0.3;
@@ -878,13 +876,6 @@ li {
         align-items: center;
         width: fit-content;
         flex-direction: column;
-    }
-
-    .lesson_name_time_content_area {
-        width: 344px;
-        height: 256px;
-        position: relative;
-        border: solid 1px black;
     }
 
 
@@ -902,7 +893,6 @@ li {
     .lesson_content_area {
         width: 344px;
         height: 448px;
-        border: solid 1px black;
     }
 
     .lesson_svg {
@@ -911,7 +901,6 @@ li {
 
     .sp_scale {
         display: block;
-        border: solid 1px black;
     }
 
     .sp_hide {
@@ -920,17 +909,56 @@ li {
 
     .lp_hide {
         display: flex;
-        gap: 8px;
+        gap: 32px;
         width: fit-content;
         height: fit-content;
     }
 
     .lp_hide .lesson_time {
         border: none;
+        width: 136px;
     }
 
     .lesson_tiktok::before {
         background-color: transparent;
+    }
+
+    .lesson_name_time_content_area {
+        position: sticky;
+        top: 0;
+        display: flex;
+        gap: 40px;
+        overflow-x: scroll;
+        height: fit-content;
+        width: 100vw;
+        padding: 16px 0px;
+    }
+
+    .lesson_text_transition,
+    .lesson_name_time,
+    .lesson_content {
+        opacity: 1;
+    }
+
+    .lesson_name_time_content {
+        position: static;
+    }
+
+    .lesson_text_transition {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .scroll_space_2 {
+        height: fit-content;
+    }
+
+    .margin_left {
+        margin-left: 200px;
+    }
+
+    .margin_right {
+        margin-right: 200px;
     }
 }
 
@@ -965,6 +993,7 @@ li {
     justify-content: center;
     flex-wrap: wrap;
     gap: 24px;
+
 }
 
 .flow_element {
@@ -1022,8 +1051,9 @@ li {
 
     .flow_element {
         flex-direction: row;
-        justify-content: center;
         width: 256px;
+        display: flex;
+
     }
 
     .flow_img {
@@ -1063,13 +1093,15 @@ li {
 }
 
 .cta_button_area .button_free_back,
-.button_lesson_back {
+.cta_button_area .button_lesson_back {
     border-radius: 36px;
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+    transition: scale 0.25s;
+    scale: 1.0;
 }
 
-.cta_button_area .button_free_text,
-.cta_button_area .button_lesson_text {
+.cta_button_area .button_free_back .button_free_text,
+.cta_button_area .button_lesson_back .button_lesson_text {
     font-size: 36px;
     padding: 18px;
 }
@@ -1096,8 +1128,8 @@ li {
         width: 95%;
     }
 
-    .cta_button_area .button_free_text,
-    .cta_button_area .button_lesson_text {
+    .cta_button_area .button_free_back .button_free_text,
+    .cta_button_area .button_lesson_back .button_lesson_text {
         font-size: 24px;
     }
 }
@@ -1168,6 +1200,12 @@ li {
     object-fit: cover;
     border-radius: 0 0 24px 24px;
     z-index: 2;
+    clip-path: circle(300px at 50% 50%);
+    transition: clip-path 2s;
+}
+
+.voice_img.cut_img{
+    clip-path: circle(0px at 50% 50%);
 }
 
 .voice_img_area {
@@ -1234,6 +1272,10 @@ li {
 @media(max-width:768px) {
     .price_card {
         width: 95%;
+    }
+
+    .price_card_area {
+        flex-direction: column;
     }
 }
 
@@ -1453,6 +1495,7 @@ li {
 }
 
 @media(max-width:1024px) {
+
     .schoolname_area {
         display: flex;
         flex-wrap: wrap;
@@ -1468,7 +1511,7 @@ li {
     }
 
     .schedule_place_card {
-        height: 1600px;
+        height: fit-content;
         width: 100%;
     }
 
@@ -1476,6 +1519,34 @@ li {
         height: 1600px;
     }
 
+    .sp_hide_2 {
+        display: none;
+    }
+
+    .free_schedules {
+        gap: 16px;
+    }
+
+    .python_schedules {
+        gap: 16px;
+    }
+
+    .free_date {
+        font-size: 32px;
+    }
+
+    .free_day,
+    .free_time {
+        font-size: 16px;
+        padding: 4px;
+        border: solid 2px black;
+        border-radius: 2px;
+        line-height: 1;
+    }
+
+    .free_time {
+        border: none;
+    }
 
 }
 
@@ -1579,10 +1650,15 @@ li {
     width: 24px;
 }
 
-.faq_element_a div {
+.faq_title_a {
+    font-size: 24px;
+    line-height: 24px;
+    color: #FF4639;
+    font-weight: 700;
+    width: 24px;
     margin-left: 3px;
-    color: #f04830;
 }
+
 
 .faq_text:not(.faq_button) {
     width: fit-content;
@@ -1596,7 +1672,7 @@ li {
     background-color: transparent;
     border: none;
     transition: transform .4s;
-    color: #208200;
+    color: #000000;
 }
 
 .faq_element_a.faq_open {
@@ -1627,19 +1703,20 @@ li {
 }
 
 .enter_form_area {
-    width: 800px;
+    width: 760px;
     height: fit-content;
     display: flex;
     gap: 80px;
     margin: 0 auto;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 
 
 .enter_form {
     max-width: 320px;
-    width: 80%;
+    width: fit-content;
     height: 80px;
     display: flex;
     flex-direction: column;
@@ -1675,11 +1752,11 @@ li {
 
 @media(max-width:1024px) {
     .enter_form_area {
-        gap: 24px;
+        row-gap: 48px;
+        column-gap: 100px;
         align-items: center;
         flex-wrap: wrap;
-        width: 688px;
-        justify-content: center;
+        width: 600px;
     }
 
     .enter_form_input {
@@ -1704,7 +1781,9 @@ li {
 
 
 @media(max-width:768px) {
-    .enter_form_input {
+
+    .enter_form_input,
+    .pull_menu {
         width: 100%;
     }
 
@@ -1719,6 +1798,10 @@ li {
 
     .application_card {
         padding: 16px;
+    }
+
+    .form_submit {
+        margin-top: 40px;
     }
 }
 
@@ -1745,7 +1828,6 @@ footer {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    border: solid 1px black;
 }
 
 
@@ -1774,10 +1856,9 @@ footer {
 
 
 .svg_text {
-    font-weight: 900;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow 700', sans-serif;
-    font-size: clamp(4.5rem, 22vw, 16rem);
-    transform-origin: center center;
+    transform-box: fill-box;
+    transform-origin: 48% 70%;
+    transform: translate(723px, 400px) scale(4);
 }
 
 .sum_mask {
@@ -1788,6 +1869,50 @@ footer {
 
 .scroll_space {
     height: 200vh;
+}
+
+.scroll_down {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow 700', sans-serif;
+    font-size: 8px;
+}
+
+.scroll_line{
+    position: absolute;
+    bottom: 30px;
+    right: 70px;
+    display: block;
+    width: 4px;
+    height: 60px;
+    background-color:#ffffff;
+}
+
+.scroll_ball{
+    position: absolute;
+    bottom: 90px;
+    right:67px;
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    animation: down_ball 2s ease-out infinite;
+}
+
+@keyframes down_ball{
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(60px);
+    }
+}
+
+.scroll_text{
+    position: absolute;
+    right: 30px;
+    bottom:100px;
+    font-size: 16px;
+    color: #ffffff;
 }
 
 /*日時日付クリックアニメーション*/
@@ -1820,12 +1945,14 @@ footer {
 .before_animation {
     transform: translateY(60px);
     opacity: 0;
+    animation-delay: 2s;
 }
 
 .after_animation {
     transform: translateY(0%);
     opacity: 1;
     transition: opacity 1s, transform 1s;
+    animation-delay: 2s;
 }
 
 
@@ -1833,12 +1960,14 @@ footer {
 .before_animation_left {
     transform: translateX(-400px);
     opacity: 0;
+    animation-delay: 2s;
 }
 
 .after_animation_right {
     transform: translateX(0px);
     opacity: 1;
     transition: opacity 3s, transform 3s;
+    animation-delay: 2s;
 }
 
 /*右からスクロール*/
@@ -1852,4 +1981,8 @@ footer {
     transform: translateX(0px);
     opacity: 1;
     transition: opacity 2s, transform 2s;
+}
+
+.animation_scale {
+    scale: 1.0;
 }
